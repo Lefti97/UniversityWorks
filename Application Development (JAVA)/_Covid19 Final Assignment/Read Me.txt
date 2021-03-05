@@ -1,0 +1,12 @@
+Covid19 Application
+
+The program was written in Netbeans(Java 8) and uses JavaFX gui.
+
+It uses an xlsx file from this link:
+https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide.xlsx
+that has global official daily records of Covid19 cases, deaths etc.
+
+The xlsx file is copied to a TableView(JavaFX) using Apache POI
+and shows LineChart statistics for each country.
+
+The xlsx file must be placed inside the project directory (Covid19_Application).

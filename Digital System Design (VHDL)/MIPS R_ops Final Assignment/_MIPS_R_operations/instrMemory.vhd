@@ -1,0 +1,30 @@
+library ieee;
+use ieee.std_logic_1164.all;
+USE ieee.std_logic_unsigned.all;
+USE ieee.numeric_std.ALL;
+entity instrMemory is port (
+    Addr : in std_logic_vector(3 downto 0);
+    C : out std_logic_vector(31 downto 0));
+end instrMemory;
+architecture arch1 of instrMemory is
+    type instr_array is array (0 to 15) of std_logic_vector (31 downto 0);
+    constant instrmem: instr_array := (
+    "00000000010001100010000000100000", -- 0 add $4, $2, $6
+    "00000000010001100010100000100010", -- 1 sub $5, $2, $6
+    "11111100100001010000000000000000", -- 2 only to read $4,$5
+    "00000000000000000000000000000000", -- 3
+    "00000000000000000000000000000000", -- 4
+    "00000000000000000000000000000000", -- 5
+    "00000000000000000000000000000000", -- 6
+    "00000000000000000000000000000000", -- 7
+    "00000000000000000000000000000000", -- 8
+    "00000000000000000000000000000000", -- 9
+    "00000000000000000000000000000000", --10
+    "00000000000000000000000000000000", --11
+    "00000000000000000000000000000000", --12
+    "00000000000000000000000000000000", --13
+    "00000000000000000000000000000000", --14
+    "00000000000000000000000000000000");--15
+begin
+    C <= instrmem(to_integer(unsigned(Addr)));
+end arch1;

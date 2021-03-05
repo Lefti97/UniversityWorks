@@ -1,0 +1,62 @@
+
+--1o Erwtima
+SELECT PNAME,ENAME,JOB FROM PROJ,EMP,ASSIGN
+WHERE PROJ.PROJNO = ASSIGN.PROJNO AND EMP.EMPNO = ASSIGN.EMPNO
+ORDER BY PNAME,JOB;
+--2o Erwtima
+SELECT DNAME "DEPARTMENT"
+,(SELECT ENAME FROM EMP WHERE EMPNO=X.MGR) "MANAGER"
+,ENAME "EMPLOYEE"
+FROM DEPT,EMP X
+WHERE DEPT.DEPTNO = X.DEPTNO
+ORDER BY DNAME,ENAME;
+--3o Erwtima
+SELECT ENAME,JOB,LOC FROM EMP,DEPT
+WHERE EMP.DEPTNO=DEPT.DEPTNO AND
+EMP.DEPTNO IN (SELECT DEPTNO FROM DEPT WHERE DNAME='RESEARCH');
+--4o Erwtima
+SELECT ENAME FROM EMP,PROJ,ASSIGN
+WHERE PROJ.PROJNO = ASSIGN.PROJNO AND
+ASSIGN.PROJNO IN (SELECT PROJNO FROM PROJ WHERE PNAME='PAYROLL') AND
+EMP.EMPNO = ASSIGN.EMPNO AND
+ASSIGN.PTIME > 50;
+
+/*
+APOTELESMATA:
+
+1o ERWTIMA:
++-----------+---------+------------+
+| PNAME     | ENAME   | JOB        |
++-----------+---------+------------+
+| PAYROLL   | CODD    | ANALYST    |
+| PAYROLL   | ELMASRI | ANALYST    |
+| PAYROLL   | DATE    | PROGRAMMER |
+| PERSONNEL | CODD    | ANALYST    |
+| PERSONNEL | NAVATHE | SALESMAN   |
++-----------+---------+------------+
+
+2o ERWTIMA:
++------------+---------+----------+
+| DEPARTMENT | MANAGER | EMPLOYEE |
++------------+---------+----------+
+| ACCOUNTING | ELMASRI | CODD     |
+| ACCOUNTING | ELMASRI | DATE     |
+| ACCOUNTING | ELMASRI | ELMASRI  |
+| RESEARCH   | NAVATHE | NAVATHE  |
++------------+---------+----------+
+
+3o ERWTIMA:
++---------+----------+--------+
+| ENAME   | JOB      | LOC    |
++---------+----------+--------+
+| NAVATHE | SALESMAN | DALLAS |
++---------+----------+--------+
+
+4o ERWTIMA:
++---------+
+| ENAME   |
++---------+
+| ELMASRI |
+| DATE    |
++---------+
+*/

@@ -1,0 +1,18 @@
+DROP DATABASE IF EXISTS askisi1_db;
+CREATE DATABASE askisi1_db;
+USE askisi1_db;
+
+CREATE TABLE students(
+	LASTNAME VARCHAR(20) NOT NULL PRIMARY KEY,	
+	FIRSTNAME VARCHAR(20) NOT NULL,
+	DEPARTMENT VARCHAR(20) NOT NULL,
+	SEMESTER INT(2),
+	PASSED INT(2)
+);
+
+INSERT INTO students
+(FIRSTNAME, LASTNAME, DEPARTMENT, SEMESTER, PASSED) VALUES
+('Lefteris', 'Vangelis', 'ICE', 5, 15),
+('Elina', 'Vatrahopiasti', 'ICE', 7, 0),
+('Gjerg', 'Skanderberg', 'LAW', 9, 40),
+('Kwnstantina', 'Samurai', 'FLS', 3, 7);

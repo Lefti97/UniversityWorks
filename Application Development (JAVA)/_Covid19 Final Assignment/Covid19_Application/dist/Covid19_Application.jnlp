@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Covid19_Application.jnlp">
+  <information>
+    <title>Covid19_Application</title>
+    <vendor>LeVa</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Covid19_Application.jar" size="9224" download="eager" />
+    <jar href="lib\SparseBitSet-1.2.jar" size="24510" download="eager" />
+    <jar href="lib\activation-1.1.1.jar" size="69409" download="eager" />
+    <jar href="lib\commons-codec-1.13.jar" size="344339" download="eager" />
+    <jar href="lib\commons-collections4-4.4.jar" size="751914" download="eager" />
+    <jar href="lib\commons-compress-1.19.jar" size="615064" download="eager" />
+    <jar href="lib\commons-logging-1.2.jar" size="61829" download="eager" />
+    <jar href="lib\commons-math3-3.6.1.jar" size="2213560" download="eager" />
+    <jar href="lib\curvesapi-1.06.jar" size="111875" download="eager" />
+    <jar href="lib\jaxb-api-2.3.1.jar" size="128076" download="eager" />
+    <jar href="lib\jaxb-core-2.3.0.1.jar" size="254858" download="eager" />
+    <jar href="lib\jaxb-impl-2.3.2.jar" size="1017695" download="eager" />
+    <jar href="lib\junit-4.12.jar" size="314932" download="eager" />
+    <jar href="lib\log4j-1.2.17.jar" size="489884" download="eager" />
+    <jar href="lib\poi-4.1.2.jar" size="2915337" download="eager" />
+    <jar href="lib\poi-examples-4.1.2.jar" size="377209" download="eager" />
+    <jar href="lib\poi-excelant-4.1.2.jar" size="31321" download="eager" />
+    <jar href="lib\poi-ooxml-4.1.2.jar" size="1888231" download="eager" />
+    <jar href="lib\poi-ooxml-schemas-4.1.2.jar" size="7912488" download="eager" />
+    <jar href="lib\poi-scratchpad-4.1.2.jar" size="1834265" download="eager" />
+    <jar href="lib\xmlbeans-3.1.0.jar" size="2579738" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Covid19_Application" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="covid19_application.Covid19_Application"  name="Covid19_Application" />
+  <update check="always"/>
+</jnlp>

@@ -1,0 +1,42 @@
+
+.data
+
+.text
+.globl main
+main:
+li $s0, '0'
+li $s1, '9'
+
+loop1:
+li $v0, 12
+syscall
+sle $t9, $v0, $s1
+beq $t9, $zero, exit
+sle $t9, $s0, $v0
+beq $t9, $zero, exit
+
+add $t0, $v0, $zero	#number given
+add $a0, $t0, $zero
+li $v0, 11
+beq $t0, $s0, case0
+
+
+loop2:
+syscall
+addi $a0, $a0, 1
+slt $t8, $a0, $s1
+bne $t8, $zero, loop2
+add $a0, $s0, $zero
+loop3:
+syscall
+addi $a0, $a0, 1
+slt $t8, $a0, $t0
+bne $t8, $zero, loop3
+
+exit:
+li $v0, 10
+syscall
+
+case0:
+addi $t0, $s1, 1
+j loop3

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bookstore DB Main Page</title>
+        <style>
+            table, td, th{
+                border: 1px solid black;
+            }
+            table{
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Bookstore DB Management</h1>
+
+        <form action="index.html">
+            <input type="submit" value="Main Page"> </form>
+        <form action="View" method="GET">
+            <input type="hidden" name="ListOption" value="AllAvail"/>
+            <input type="submit" value="List available books"> </form>
+        <form action="View" method="GET">
+            <input type="hidden" name="ListOption" value="ByID"/>
+            <input type="submit" value="Search book by ID: ">
+            <input type="number" min="10000" style="width: 5em" name="sID"/> </form>
+        <form action="addBook.html"> 
+            <input type="submit" value="Add book"></form>
+        <br>
+
+        <p style="text-align: center;">
+            This is an assignment about Network Programming.
+            The website is used to manage a bookstore database. <br>
+            It was created using Java Servlets, HTML, MariaDB(xampp) and Tomcat(xampp).
+        </p>
+
+    </body>
+</html>
