@@ -1,1 +1,1 @@
-Repo for my Informatics & Computer Engineering studies.
+Repo for my Informatics & Computer Engineering programming works.
