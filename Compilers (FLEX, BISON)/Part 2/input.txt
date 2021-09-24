@@ -1,0 +1,32 @@
+3 + 2
+1 + 2 + 3
+3 - 2
+1 + 2 - 3
+3 * 5
+3 / 5
+17 % 5
+var = 11 + 10 - 99 * 4 + anothervar + orconst
+va1 = 3 + 2 * 5 - 3 / 8 % 7
+var = &a
+testvar + 1
+var1 + _var2
+0-
+!gfsd
+5 != 4
+5 == 5
+fdsafasd = 4 == 7
+as++
+++as
+var = const++
+tre--
+++gfd
+--gfd
+10 <= 43
+sdaf >= 432
+sdaf < 432
+sdaf > 432
+sdaf += 432
+sdaf -= 432
+sdaf *= 5342
+sdaf /= 432
+sdaf = sdaf

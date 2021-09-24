@@ -1,0 +1,55 @@
+"one"
+2
+three
+1 + 2
+2 - 1
+2 * 2
+6 % 2
+1 != 2
+1 != 1
+2 > 2
+1 < 2
+1 >= 1
+1 <= 2
+1 && 1
+1 || 0
+1.1 + 2.2
+var = !var2
+this is some "next level shit"
+int1
+int2 not_int2;
+int 03 ;
+int4_
+int 0x5 
+float 6.0
+float 7e-7
+not_float 08.00
+var9 _var9
+10var
+11not_
+0xFFFFFF
+0x26FE12var.
+/not_comment"This is a string and it just works"
+"On the other \n hand \this
+ should not work"
+""
+break case func const continue double do else float for if int long return short sizeof struct switch void while
+SGSSGSif sdfasfd
+whileSDGSDS
++ - * / % = += -= *= /= ! && || == != ++ -- < > <= >= &
++++
+
+gfdsgsdf/*jhgf */
+"string 29"
+"Mark said, \"Boo!\"\n"
+"\""
+" \ \ / \ "
+"""
+"\"
+"You’re playing d&d, you’re playing d&d, this whole apartment is playing d&d!"
+(notToken)//this is a short comment
+/*this is a verylong 
+triple extral
+line 
+comment */
+/ //this is a short comment

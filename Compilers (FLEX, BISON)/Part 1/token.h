@@ -1,0 +1,9 @@
+#define DELIMITER_ID 1
+#define INTCONST_ID 2
+#define FLOATCONST_ID 3
+#define VARIABLE_ID 4
+#define STRING_ID 5
+#define COMMENT_ID 6
+#define KEYWORD_ID 7
+#define OPERATOR_ID 8
+#define UNKNOWN_TOKEN_ID 9
