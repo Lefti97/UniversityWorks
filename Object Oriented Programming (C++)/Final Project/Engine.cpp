@@ -64,15 +64,18 @@ void Engine::loadMap(char *mapPath)
             std::getline(mapFile, str);
             
             for(int i=0; i<str.size();i++)
-            {                
+            {
                 // FIX: Problem with windows text files when using WSL
-                if(str.at(i) == 13) // ASCII 13 == Carriage Return
-                    str.at(i) = '\n';
-                
+                if(str.at(i) == 13){ // ASCII 13 == Carriage Return
+                    str.erase(str.begin() + i); // Remove Carriage Return
+                    continue;
+                } 
+                    
                 // Check if map has only '*', ' ' and newlines.
-                if((str.at(i) != '*') && (str.at(i) != ' ')&& (str.at(i) != '\n'))
-                    throw "Map file has invalid characters.";
+                if((str.at(i) != '*') && (str.at(i) != ' ') && (str.at(i) != '\n'))
+                    throw "Map file has invalid characters.";                
             }
+            str.push_back('\n'); // Add newline
             map.push_back(str);
         }
         mapFile.close();
