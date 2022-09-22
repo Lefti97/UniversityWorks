@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Country_name" type="xs:string" />
+              <xs:element name="Year" type="xs:unsignedShort" />
+              <xs:element name="Life_Ladder" type="xs:decimal" />
+              <xs:element name="Log_GDP_per_capita" type="xs:decimal" />
+              <xs:element name="Social_support" type="xs:decimal" />
+              <xs:element name="Healthy_life_expectancy_at_birth" type="xs:decimal" />
+              <xs:element name="Freedom_to_make_life_choices" type="xs:decimal" />
+              <xs:element name="Generosity" type="xs:decimal" />
+              <xs:element name="Perceptions_of_corruption" type="xs:decimal" />
+              <xs:element name="Positive_affect" type="xs:decimal" />
+              <xs:element name="Negative_affect" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

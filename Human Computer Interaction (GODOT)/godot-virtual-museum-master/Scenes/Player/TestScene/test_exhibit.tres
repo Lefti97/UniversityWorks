@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/ExhibitResource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+id = ""
+name = "Stanley"
+description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec neque sit amet quam imperdiet scelerisque. Praesent quis odio sit amet ligula vestibulum sagittis eu non magna. Donec rutrum sit amet est at consequat. Vivamus fringilla nisi eu eros blandit ultricies. Proin elementum pharetra tincidunt. Vivamus vestibulum, sapien pretium euismod mollis, leo ipsum condimentum mi, in luctus leo magna in enim. Cras elementum ipsum iaculis metus pellentesque lacinia. Pellentesque dapibus augue quis neque tincidunt feugiat. Sed placerat, augue eu congue pellentesque, augue orci commodo nisl, sit amet ultrices sem risus in tellus. Pellentesque a ullamcorper tortor.
+
+In hendrerit sapien sed libero maximus, convallis dignissim erat molestie. Cras porttitor vel ante nec interdum. Suspendisse potenti. Nulla aliquet ipsum eleifend urna imperdiet, in mattis tellus rhoncus. Nunc sem sem, laoreet quis convallis eget, aliquam eu nisl. Curabitur eget lacinia nisl. Aliquam est nulla, porttitor nec ultricies in, congue sit amet massa. Aenean porta, magna id finibus condimentum, mauris leo eleifend neque, in blandit est mauris vitae massa. Quisque vel viverra velit, vel rutrum urna. Morbi sit amet felis massa.
+
+Curabitur finibus nec odio interdum hendrerit. Donec hendrerit elit ut ipsum auctor convallis. Nam placerat turpis sed viverra consequat. Duis et erat convallis, aliquet ex at, maximus turpis. Curabitur venenatis, ante eu consequat volutpat, erat enim facilisis risus, ut congue eros felis in ligula. Quisque euismod felis eget congue fringilla. Ut iaculis risus nunc, sed ullamcorper nulla volutpat a. Sed malesuada fermentum est, quis fermentum purus auctor sed. Mauris fringilla lacus ut ullamcorper luctus. Aliquam egestas justo nec viverra volutpat. Nullam tincidunt eros sed mauris convallis bibendum. Curabitur a lacus et odio pulvinar vulputate a vitae nisl. Vestibulum ac diam quis augue convallis facilisis et in neque. Mauris condimentum placerat ex.
+
+Nullam nec risus odio. Phasellus faucibus enim non ante viverra, a egestas nisi rhoncus. Morbi turpis nulla, varius lacinia erat sit amet, tincidunt consequat turpis. Pellentesque accumsan neque vel nisi consequat, sit amet congue leo auctor. Integer maximus sollicitudin porta. Sed ac dictum libero, at fermentum nisl. Nunc elementum libero at ipsum viverra, non fringilla nulla convallis. Nam ullamcorper, diam vel scelerisque mollis, augue turpis auctor elit, imperdiet ultricies ligula quam sit amet eros. Donec volutpat tincidunt mi, ut aliquet elit euismod congue. Ut ultrices libero sed metus volutpat vehicula. Fusce tempor sollicitudin erat ultrices pellentesque. Nulla sed pulvinar diam. Ut in egestas nisl.
+
+Aenean pharetra nisl et tristique lacinia. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam quis justo neque. Vestibulum nulla velit, vehicula sed lacus vel, blandit ultricies nisi. Aenean venenatis libero a tellus auctor tristique. Nunc fermentum, velit elementum imperdiet pellentesque, dolor urna ornare nibh, ut molestie magna tellus vitae mauris. Ut in ullamcorper dolor, quis elementum quam. Donec et viverra magna, eu tempor ipsum. Aenean vel porttitor tortor, vel dapibus felis. Mauris posuere metus at augue elementum suscipit. Ut eu mauris ac dui pellentesque lobortis. Sed tincidunt dignissim sapien eu bibendum. Maecenas lacus felis, aliquet vitae venenatis et, facilisis et sapien. Donec in diam ut enim ullamcorper imperdiet in porta elit. Integer ac leo nunc. "
+cost = 0

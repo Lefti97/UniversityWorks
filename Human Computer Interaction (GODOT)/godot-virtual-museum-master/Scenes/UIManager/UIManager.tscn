@@ -1,0 +1,124 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scenes/UIManager/manager.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/UIManager/InfoPopUp.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/crosshair.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/UIManager/CartPrompt.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/UIManager/BuyScreen.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/base_theme.tres" type="Theme" id=7]
+[ext_resource path="res://addons/dialogic/Example Assets/Fonts/Overlock/Overlock-Regular.ttf" type="DynamicFontData" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+outline_size = 1
+outline_color = Color( 0.129412, 0.129412, 0.129412, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 8 )
+
+[node name="UIManager" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = -1.0
+margin_right = 3.0
+margin_bottom = -1.0
+theme = ExtResource( 7 )
+script = ExtResource( 1 )
+
+[node name="Crosshair" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 4 )
+
+[node name="Prompt" type="Label" parent="."]
+visible = false
+anchor_left = -0.003
+anchor_top = 0.8
+anchor_right = 0.997
+anchor_bottom = 0.8
+margin_left = 0.072
+margin_right = 0.0719604
+margin_bottom = 26.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+
+[node name="InfoPopUp" parent="." instance=ExtResource( 2 )]
+
+[node name="HelpPrompt" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -119.0
+margin_top = -24.0
+margin_right = -10.0
+margin_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Press F1 for Help"
+
+[node name="CartPrompt" parent="." instance=ExtResource( 5 )]
+
+[node name="BuyScreen" parent="." instance=ExtResource( 6 )]
+
+[node name="HelpDialog" type="AcceptDialog" parent="."]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -391.0
+margin_top = -236.0
+margin_right = 391.0
+margin_bottom = 236.0
+window_title = "Help"
+resizable = true
+dialog_text = "
+"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HelpDialog"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 49.0
+margin_right = -8.0
+margin_bottom = -36.0
+bbcode_enabled = true
+bbcode_text = "Welcome to Help screen.
+
+How to move the player:
+W = Forward
+S  = Backward
+A  = Left
+D  = Right
+
+Press Esc to toggle mouse visibility.
+
+Look around by moving your mouse.
+
+Press E to interact with objects in the museum.
+
+Press Z to open the buy screen."
+text = "Welcome to Help screen.
+
+How to move the player:
+W = Forward
+S  = Backward
+A  = Left
+D  = Right
+
+Press Esc to toggle mouse visibility.
+
+Look around by moving your mouse.
+
+Press E to interact with objects in the museum.
+
+Press Z to open the buy screen."

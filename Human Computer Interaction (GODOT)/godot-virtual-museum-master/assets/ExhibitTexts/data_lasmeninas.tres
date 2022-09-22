@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/ExhibitResource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+id = "lasmeninas"
+name = "Las Meninas"
+description = "Las Meninas (pronounced [laz meˈninas]; Spanish for 'The Ladies-in-waiting') is a 1656 painting in the Museo del Prado in Madrid, by Diego Velázquez, the leading artist of the Spanish Golden Age. Its complex and enigmatic composition raises questions about reality and illusion, and creates an uncertain relationship between the viewer and the figures depicted. Because of these complexities, Las Meninas has been one of the most widely analyzed works in Western painting.
+
+The painting is believed by F. J. Sánchez Cantón to depict the main chamber in the Royal Alcazar of Madrid during the reign of King Philip IV of Spain, and presents several figures, most identifiable from the Spanish court, captured, according to some commentators, in a particular moment as if in a snapshot. Some look out of the canvas towards the viewer, while others interact among themselves. The 5-year-old Infanta Margaret Theresa is surrounded by her entourage of maids of honour, chaperone, bodyguard, two dwarfs and a dog. Just behind them, Velázquez portrays himself working at a large canvas. Velázquez looks outwards, beyond the pictorial space to where a viewer of the painting would stand. In the background there is a mirror that reflects the upper bodies of the king and queen. They appear to be placed outside the picture space in a position similar to that of the viewer, although some scholars have speculated that their image is a reflection from the painting Velázquez is shown working on.
+
+Las Meninas has long been recognised as one of the most important paintings in Western art history. The Baroque painter Luca Giordano said that it represents the \"theology of painting\", and in 1827 the president of the Royal Academy of Arts Sir Thomas Lawrence described the work in a letter to his successor David Wilkie as \"the true philosophy of the art\". More recently, it has been described as \"Velázquez's supreme achievement, a highly self-conscious, calculated demonstration of what painting could achieve, and perhaps the most searching comment ever made on the possibilities of the easel painting\"."
+cost = 3500

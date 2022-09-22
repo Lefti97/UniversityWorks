@@ -1,0 +1,17 @@
+<!DOCTYPE root
+[
+<!ELEMENT root (row+)>
+    <!ELEMENT row (Country_name,Year,Life_Ladder,Log_GDP_per_capita,Social_support,Healthy_life_expectancy_at_birth,Freedom_to_make_life_choices,Generosity,Perceptions_of_corruption,Positive_affect,Negative_affect)>
+        <!ELEMENT Country_name (#PCDATA)>
+        <!ELEMENT Year (#PCDATA)>
+        <!ELEMENT Life_Ladder (#PCDATA)>
+        <!ELEMENT Log_GDP_per_capita (#PCDATA)>
+        <!ELEMENT Social_support (#PCDATA)>
+        <!ELEMENT Healthy_life_expectancy_at_birth (#PCDATA)>
+        <!ELEMENT Freedom_to_make_life_choices (#PCDATA)>
+        <!ELEMENT Generosity (#PCDATA)>
+        <!ELEMENT Perceptions_of_corruption (#PCDATA)>
+        <!ELEMENT Positive_affect (#PCDATA)>
+        <!ELEMENT Negative_affect (#PCDATA)>
+]
+>

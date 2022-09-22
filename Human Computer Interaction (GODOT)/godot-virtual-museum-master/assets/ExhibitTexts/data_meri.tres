@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/ExhibitResource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+id = "meri"
+name = "Statue of Meri"
+description = "Statue of Meri, Old Empire, 6th Dynasty (2250 BCE), unknown source, sandstone, polychromy. 
+Musée d’Art et d’Histoire (Musée du Cinquantenaire, Brussels, Belgium)."
+cost = 2750

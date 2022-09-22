@@ -1,0 +1,138 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.8.19",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Statuette_Meri_-_CleanUp_-_LowPoly",
+            "rotation" : [
+                -0.005037791095674038,
+                0.7160645723342896,
+                -0.01043217908591032,
+                0.6979379057884216
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "Statuette_Meri_-_CleanUp_-_LowPoly",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0
+                },
+                "metallicFactor" : 0
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Statuette_Meri_-_CleanUp_-_LowPoly",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "Statuette_Meri_-_CleanUp_-_LowPoly",
+            "uri" : "Statuette_Meri_-_CleanUp_-_LowPoly.jpg"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 30608,
+            "max" : [
+                1.3818460702896118,
+                7.19194221496582,
+                1.2493462562561035
+            ],
+            "min" : [
+                -1.8395633697509766,
+                -0.04590034484863281,
+                -1.2062748670578003
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 30608,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 30608,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 112062,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 367296,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 367296,
+            "byteOffset" : 367296
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 244864,
+            "byteOffset" : 734592
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 224124,
+            "byteOffset" : 979456
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 1203580,
+            "uri" : "statue-of-meri.bin"
+        }
+    ]
+}

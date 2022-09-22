@@ -1,0 +1,143 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.8.19",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "aveugle_-_CleanUp_-_LowPoly",
+            "rotation" : [
+                0.013546007685363293,
+                -0.15201987326145172,
+                0.007841037586331367,
+                0.9882535934448242
+            ],
+            "scale" : [
+                0.12555313110351562,
+                0.12555313110351562,
+                0.12555313110351562
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "aveugle_-_CleanUp_-_LowPoly_Material_u1_v1",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0
+                },
+                "metallicFactor" : 0
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "aveugle_-_CleanUp_-_LowPoly",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "aveugle_-_CleanUp_-_LowPoly_u1_v1",
+            "uri" : "aveugle_-_CleanUp_-_LowPoly_u1_v1.jpg"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 91693,
+            "max" : [
+                12.219915390014648,
+                22.732988357543945,
+                8.911425590515137
+            ],
+            "min" : [
+                -10.673850059509277,
+                -0.3108014464378357,
+                -8.868480682373047
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 91693,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 91693,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5125,
+            "count" : 299994,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 1100316,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1100316,
+            "byteOffset" : 1100316
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 733544,
+            "byteOffset" : 2200632
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1199976,
+            "byteOffset" : 2934176
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 4134152,
+            "uri" : "the-blind-man.bin"
+        }
+    ]
+}

@@ -1,0 +1,138 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.8.19",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "quatres_saison_01_CleanUp_LowPoly",
+            "rotation" : [
+                0.032380361109972,
+                0.7297349572181702,
+                0.004683987237513065,
+                0.6829469799995422
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "quatres_saison_01_CleanUp_LowPoly",
+            "pbrMetallicRoughness" : {
+                "baseColorTexture" : {
+                    "index" : 0
+                },
+                "metallicFactor" : 0
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "quatres_saison_01_CleanUp_LowPoly",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "textures" : [
+        {
+            "sampler" : 0,
+            "source" : 0
+        }
+    ],
+    "images" : [
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "quatres_saison_01_CleanUp_LowPoly",
+            "uri" : "quatres_saison_01_CleanUp_LowPoly.jpg"
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 30211,
+            "max" : [
+                0.6659274697303772,
+                2.082371473312378,
+                0.6988102197647095
+            ],
+            "min" : [
+                -0.6741572618484497,
+                -0.14445935189723969,
+                -0.6552088260650635
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 30211,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 30211,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 97662,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 362532,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 362532,
+            "byteOffset" : 362532
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 241688,
+            "byteOffset" : 725064
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 195324,
+            "byteOffset" : 966752
+        }
+    ],
+    "samplers" : [
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 1162076,
+            "uri" : "the-four-season.bin"
+        }
+    ]
+}

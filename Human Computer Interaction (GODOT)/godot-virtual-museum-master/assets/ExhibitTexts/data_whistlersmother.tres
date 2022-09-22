@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/ExhibitResource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+id = "whistlersmother"
+name = "Whistler's mother"
+description = "Arrangement in Grey and Black No. 1, best known under its colloquial name Whistler's Mother, is a painting in oils on canvas created by the American-born painter James Abbott McNeill Whistler in 1871. The subject of the painting is Whistler's mother, Anna McNeill Whistler. The painting is 56.81 by 63.94 inches (1,443 mm × 1,624 mm), displayed in a frame of Whistler's own design. It is held by the Musée d'Orsay in Paris, having been bought by the French state in 1891. It is one of the most famous works by an American artist outside the United States. It has been variously described as an American icon and a Victorian Mona Lisa."
+cost = 1700

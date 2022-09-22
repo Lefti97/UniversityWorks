@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/ExhibitResource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+id = "vangogh"
+name = "Vincent van Gogh self-portrait"
+description = "Dutch Post-Impressionist painter Vincent van Gogh painted a self-portrait in oil on canvas in September 1889. The work, which may have been Van Gogh's last self-portrait, was painted shortly before he left Saint-Rémy-de-Provence in southern France. The painting is now at the Musée d'Orsay in Paris."
+cost = 2500

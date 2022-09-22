@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Player/InteractPoint.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Level/dev_orange.png" type="Texture" id=2]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.336258, 0.523948, 0.321528 )
+
+[node name="InteractPoint" type="Area"]
+script = ExtResource( 1 )
+y_offset = 0.84
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform( 0.0559359, 0, 0, 0, 0.0559359, 0, 0, 0, 0.0559359, 0, 0.837102, 0 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.540147, 0 )
+shape = SubResource( 1 )

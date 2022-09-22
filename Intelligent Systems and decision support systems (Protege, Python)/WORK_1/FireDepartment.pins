@@ -1,0 +1,1462 @@
+; Tue Jun 07 22:53:07 EEST 2022
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+([FireDepartment_Class0] of  Plane
+
+	(Available TRUE)
+	(Type HC-130H))
+
+([FireDepartment_Class1] of  BuildingFire
+
+	(Location "Varimpompi"))
+
+([FireDepartment_Class10001] of  %3APAL-CONSTRAINT
+)
+
+([FireDepartment_Class10002] of  Suit
+
+	(Available TRUE)
+	(SuitType Proximity))
+
+([FireDepartment_Class10010] of  Volunteer
+
+	(Available TRUE)
+	(Name "Giorgos")
+	(Rank 1))
+
+([FireDepartment_Class10011] of  Volunteer
+
+	(Available TRUE)
+	(Name "Kwstas")
+	(Rank 1))
+
+([FireDepartment_Class10012] of  Volunteer
+
+	(Available TRUE)
+	(Name "Giannis")
+	(Rank 1))
+
+([FireDepartment_Class10013] of  Volunteer
+
+	(Available TRUE)
+	(Name "Makis")
+	(Rank 1))
+
+([FireDepartment_Class10014] of  Volunteer
+
+	(Available FALSE)
+	(Name "Tzitzikwstas")
+	(Rank 1))
+
+([FireDepartment_Class10015] of  Volunteer
+
+	(Available TRUE)
+	(Name "Karipidis")
+	(Rank 1))
+
+([FireDepartment_Class10016] of  Volunteer
+
+	(Available TRUE)
+	(Name "Lefterakis")
+	(Rank 1))
+
+([FireDepartment_Class10017] of  Volunteer
+
+	(Available TRUE)
+	(Name "Manolakis")
+	(Rank 1))
+
+([FireDepartment_Class10018] of  Volunteer
+
+	(Available TRUE)
+	(Name "Kyrgiakos")
+	(Rank 1))
+
+([FireDepartment_Class10019] of  Volunteer
+
+	(Available TRUE)
+	(Name "Maria")
+	(Rank 1))
+
+([FireDepartment_Class10020] of  Volunteer
+
+	(Available TRUE)
+	(Name "Basilis")
+	(Rank 1))
+
+([FireDepartment_Class10021] of  Volunteer
+
+	(Available TRUE)
+	(Name "Mitroglou")
+	(Rank 1))
+
+([FireDepartment_Class10022] of  Volunteer
+
+	(Available FALSE)
+	(Name "Takis")
+	(Rank 1))
+
+([FireDepartment_Class10023] of  Volunteer
+
+	(Available TRUE)
+	(Name "Fanis")
+	(Rank 1))
+
+([FireDepartment_Class10024] of  Volunteer
+
+	(Available TRUE)
+	(Name "Aggeliki")
+	(Rank 1))
+
+([FireDepartment_Class10025] of  Volunteer
+
+	(Available FALSE)
+	(Name "Stelios")
+	(Rank 1))
+
+([FireDepartment_Class10028] of  Driver
+
+	(Available TRUE)
+	(Name "Loukas Malfoy")
+	(Rank 4)
+	(TruckType Small))
+
+([FireDepartment_Class10029] of  Driver
+
+	(Available TRUE)
+	(Name "Giorgos Manolakis")
+	(Rank 3)
+	(TruckType Large Small Medium))
+
+([FireDepartment_Class10031] of  Pilot
+
+	(Available TRUE)
+	(DrivableVehicles Helicopter)
+	(Name "Steven Gerrard")
+	(Rank 3))
+
+([FireDepartment_Class10032] of  Plane
+
+	(Available TRUE)
+	(Type Boeing+772))
+
+([FireDepartment_Class10034] of  Helicopter
+
+	(Available TRUE)
+	(Type Bell+204))
+
+([FireDepartment_Class10035] of  Helicopter
+
+	(Type Hamaya+321))
+
+([FireDepartment_Class10039] of  BuildingFire
+
+	(Location "Voula")
+	(Solved FALSE))
+
+([FireDepartment_Class10040] of  BuildingFire
+
+	(Location "Kallithea")
+	(Solved TRUE))
+
+([FireDepartment_Class10041] of  CarCrash
+
+	(Location "Kifisias")
+	(Solved TRUE))
+
+([FireDepartment_Class10042] of  CarCrash
+
+	(Location "Mesogeiwn"))
+
+([FireDepartment_Class10043] of  Flood
+
+	(Location "Peiraia")
+	(Solved TRUE))
+
+([FireDepartment_Class10044] of  Flood
+
+	(Location "Keratsini")
+	(Solved TRUE))
+
+([FireDepartment_Class10045] of  Flood
+
+	(Location "Kallithea"))
+
+([FireDepartment_Class10046] of  Flood
+
+	(Location "Palaio Faliro"))
+
+([FireDepartment_Class10047] of  ForestFire
+
+	(Location "Kaisariani Forest"))
+
+([FireDepartment_Class10048] of  ForestFire
+
+	(Location "Parnitha"))
+
+([FireDepartment_Class10049] of  ForestFire
+
+	(Location "Ymmitos")
+	(Solved TRUE))
+
+([FireDepartment_Class10050] of  ForestFire
+
+	(Location "Sounio")
+	(Solved TRUE))
+
+([FireDepartment_Class10051] of  HazardousMaterial
+
+	(Location "University Of West Attica"))
+
+([FireDepartment_Class10052] of  HazardousMaterial
+
+	(Location "Peiraias")
+	(Solved TRUE))
+
+([FireDepartment_Class10053] of  Axe
+
+	(Available TRUE))
+
+([FireDepartment_Class10054] of  Axe
+
+	(Available TRUE))
+
+([FireDepartment_Class10055] of  Axe
+
+	(Available TRUE))
+
+([FireDepartment_Class10056] of  Axe
+
+	(Available TRUE))
+
+([FireDepartment_Class10057] of  Axe
+
+	(Available TRUE))
+
+([FireDepartment_Class10058] of  Axe
+
+	(Available TRUE))
+
+([FireDepartment_Class10059] of  Axe
+
+	(Available TRUE))
+
+([FireDepartment_Class10060] of  Axe
+
+	(Available TRUE))
+
+([FireDepartment_Class10061] of  Axe
+
+	(Available TRUE))
+
+([FireDepartment_Class10062] of  Axe
+
+	(Available TRUE))
+
+([FireDepartment_Class10063] of  Axe
+
+	(Available TRUE))
+
+([FireDepartment_Class10064] of  Axe
+
+	(Available TRUE))
+
+([FireDepartment_Class10065] of  Axe
+
+	(Available TRUE))
+
+([FireDepartment_Class10066] of  Axe
+
+	(Available TRUE))
+
+([FireDepartment_Class10067] of  Axe
+
+	(Available TRUE))
+
+([FireDepartment_Class10068] of  Axe
+
+	(Available TRUE))
+
+([FireDepartment_Class10069] of  Axe
+
+	(Available TRUE))
+
+([FireDepartment_Class10070] of  Axe
+
+	(Available TRUE))
+
+([FireDepartment_Class10071] of  Axe
+
+	(Available TRUE))
+
+([FireDepartment_Class10072] of  Axe
+
+	(Available FALSE))
+
+([FireDepartment_Class10073] of  Axe
+
+	(Available FALSE))
+
+([FireDepartment_Class10074] of  Axe
+
+	(Available FALSE))
+
+([FireDepartment_Class10075] of  Axe
+
+	(Available FALSE))
+
+([FireDepartment_Class10076] of  Axe
+
+	(Available FALSE))
+
+([FireDepartment_Class10077] of  Axe
+
+	(Available FALSE))
+
+([FireDepartment_Class10078] of  CallOperator
+
+	(Available TRUE)
+	(Name "Erjon")
+	(Rank 1))
+
+([FireDepartment_Class10079] of  CallOperator
+
+	(Available TRUE)
+	(Name "Tsiko")
+	(Rank 3))
+
+([FireDepartment_Class10080] of  FireFighter
+
+	(Available FALSE)
+	(Name "Lefteris")
+	(Rank 1))
+
+([FireDepartment_Class10081] of  CallOperator
+
+	(Available FALSE)
+	(Name "Lefteris")
+	(Rank 1))
+
+([FireDepartment_Class10082] of  FireFighter
+
+	(Available TRUE)
+	(Name "Vangelis")
+	(Rank 3))
+
+([FireDepartment_Class10083] of  FireFighter
+
+	(Available TRUE)
+	(Name "Babis")
+	(Rank 1))
+
+([FireDepartment_Class10084] of  FireFighter
+
+	(Available TRUE)
+	(Name "Maximillian")
+	(Rank 1))
+
+([FireDepartment_Class10085] of  FireFighter
+
+	(Available TRUE)
+	(Name "George")
+	(Rank 1))
+
+([FireDepartment_Class10086] of  FireFighter
+
+	(Available FALSE)
+	(Name "Angela")
+	(Rank 1))
+
+([FireDepartment_Class10087] of  FireFighter
+
+	(Available TRUE)
+	(Name "Rocky")
+	(Rank 3))
+
+([FireDepartment_Class10088] of  FireFighter
+
+	(Available TRUE)
+	(Name "Katerina")
+	(Rank 1))
+
+([FireDepartment_Class10089] of  FireFighter
+
+	(Available TRUE)
+	(Name "Gewrgia")
+	(Rank 1))
+
+([FireDepartment_Class10090] of  FireFighter
+
+	(Available TRUE)
+	(Name "Piros Dimas")
+	(Rank 2))
+
+([FireDepartment_Class10091] of  FireFighter
+
+	(Available FALSE)
+	(Name "Lionel Messi")
+	(Rank 1))
+
+([FireDepartment_Class10092] of  FireFighter
+
+	(Available FALSE)
+	(Name "Cristiano Ronaldo")
+	(Rank 1))
+
+([FireDepartment_Class10093] of  FireFighter
+
+	(Available FALSE)
+	(Name "Raheem Sterling")
+	(Rank 3))
+
+([FireDepartment_Class10094] of  FireFighter
+
+	(Available FALSE)
+	(Name "Ronaldinho")
+	(Rank 3))
+
+([FireDepartment_Class10095] of  FireFighter
+
+	(Available TRUE)
+	(Name "Peter")
+	(Rank 2))
+
+([FireDepartment_Class10096] of  FireFighter
+
+	(Available TRUE)
+	(Name "Petros")
+	(Rank 2))
+
+([FireDepartment_Class10097] of  FireFighter
+
+	(Available FALSE)
+	(Name "Agamemnonas")
+	(Rank 1))
+
+([FireDepartment_Class10098] of  FireFighter
+
+	(Available TRUE)
+	(Name "Achileas")
+	(Rank 1))
+
+([FireDepartment_Class10099] of  FireFighter
+
+	(Available TRUE)
+	(Name "Afroditi")
+	(Rank 1))
+
+([FireDepartment_Class10100] of  FireFighter
+
+	(Available TRUE)
+	(Name "Piko")
+	(Rank 2))
+
+([FireDepartment_Class10101] of  FireFighter
+
+	(Available TRUE)
+	(Name "Kristo")
+	(Rank 1))
+
+([FireDepartment_Class10102] of  FireFighter
+
+	(Available TRUE)
+	(Name "Arian")
+	(Rank 1))
+
+([FireDepartment_Class10103] of  FireFighter
+
+	(Available TRUE)
+	(Name "Rudd Van Basten")
+	(Rank 3))
+
+([FireDepartment_Class10104] of  FireFighter
+
+	(Available TRUE)
+	(Name "Michael Carrick")
+	(Rank 1))
+
+([FireDepartment_Class10105] of  FireFighter
+
+	(Available TRUE)
+	(Name "Peter Crouch")
+	(Rank 2))
+
+([FireDepartment_Class10106] of  Mechanic
+
+	(Available TRUE)
+	(Name "Machik")
+	(Rank 1)
+	(VehicleType FireTruck))
+
+([FireDepartment_Class10107] of  Mechanic
+
+	(Available FALSE)
+	(Name "Eric")
+	(Rank 1)
+	(VehicleType Helicopter))
+
+([FireDepartment_Class10108] of  Mechanic
+
+	(Available FALSE)
+	(Name "Kerik")
+	(Rank 2)
+	(VehicleType
+		Plane
+		Helicopter))
+
+([FireDepartment_Class10109] of  Mechanic
+
+	(Available TRUE)
+	(Name "Vorik")
+	(Rank 4)
+	(VehicleType
+		FireTruck
+		Helicopter
+		Plane))
+
+([FireDepartment_Class10110] of  Mechanic
+
+	(Available TRUE)
+	(Name "Schumacher")
+	(Rank 3)
+	(VehicleType Plane))
+
+([FireDepartment_Class10111] of  Boots
+
+	(Available TRUE)
+	(BootType Bunker))
+
+([FireDepartment_Class10112] of  Boots
+
+	(Available TRUE)
+	(BootType Wildland))
+
+([FireDepartment_Class10113] of  Boots
+
+	(Available TRUE)
+	(BootType Bunker))
+
+([FireDepartment_Class10114] of  Boots
+
+	(Available TRUE)
+	(BootType Wildland))
+
+([FireDepartment_Class10115] of  Boots
+
+	(Available TRUE)
+	(BootType Station))
+
+([FireDepartment_Class10116] of  Boots
+
+	(Available TRUE)
+	(BootType Wildland))
+
+([FireDepartment_Class10117] of  Boots
+
+	(Available TRUE)
+	(BootType Bunker))
+
+([FireDepartment_Class10118] of  Boots
+
+	(Available TRUE)
+	(BootType Wildland))
+
+([FireDepartment_Class10119] of  Boots
+
+	(Available TRUE)
+	(BootType Wildland))
+
+([FireDepartment_Class10120] of  Boots
+
+	(Available TRUE)
+	(BootType Bunker))
+
+([FireDepartment_Class10121] of  Boots
+
+	(Available TRUE)
+	(BootType Bunker))
+
+([FireDepartment_Class10122] of  Boots
+
+	(Available TRUE)
+	(BootType Station))
+
+([FireDepartment_Class10123] of  Boots
+
+	(Available TRUE)
+	(BootType Station))
+
+([FireDepartment_Class10124] of  Boots
+
+	(Available TRUE)
+	(BootType Wildland))
+
+([FireDepartment_Class10125] of  Boots
+
+	(Available TRUE)
+	(BootType Bunker))
+
+([FireDepartment_Class10126] of  Boots
+
+	(Available TRUE)
+	(BootType Bunker))
+
+([FireDepartment_Class10127] of  Boots
+
+	(Available TRUE)
+	(BootType Station))
+
+([FireDepartment_Class10128] of  Boots
+
+	(Available TRUE)
+	(BootType Bunker))
+
+([FireDepartment_Class10129] of  Boots
+
+	(Available TRUE)
+	(BootType Wildland))
+
+([FireDepartment_Class10130] of  Boots
+
+	(Available TRUE)
+	(BootType Wildland))
+
+([FireDepartment_Class10131] of  Boots
+
+	(Available TRUE)
+	(BootType Bunker))
+
+([FireDepartment_Class10132] of  Boots
+
+	(Available TRUE)
+	(BootType Wildland))
+
+([FireDepartment_Class10133] of  Boots
+
+	(Available TRUE)
+	(BootType Station))
+
+([FireDepartment_Class10134] of  Boots
+
+	(Available TRUE)
+	(BootType Wildland))
+
+([FireDepartment_Class10135] of  Boots
+
+	(Available TRUE)
+	(BootType Station))
+
+([FireDepartment_Class10136] of  Boots
+
+	(Available TRUE)
+	(BootType Wildland))
+
+([FireDepartment_Class10137] of  Boots
+
+	(Available TRUE)
+	(BootType Wildland))
+
+([FireDepartment_Class10138] of  Boots
+
+	(Available TRUE)
+	(BootType Station))
+
+([FireDepartment_Class10139] of  Boots
+
+	(Available TRUE)
+	(BootType Bunker))
+
+([FireDepartment_Class10140] of  Boots
+
+	(Available TRUE)
+	(BootType Station))
+
+([FireDepartment_Class10141] of  Boots
+
+	(Available TRUE)
+	(BootType Bunker))
+
+([FireDepartment_Class10142] of  Boots
+
+	(Available FALSE)
+	(BootType Wildland))
+
+([FireDepartment_Class10143] of  Boots
+
+	(Available FALSE)
+	(BootType Station))
+
+([FireDepartment_Class10144] of  Boots
+
+	(Available FALSE)
+	(BootType Station))
+
+([FireDepartment_Class10145] of  Boots
+
+	(Available FALSE)
+	(BootType Bunker))
+
+([FireDepartment_Class10146] of  Boots
+
+	(Available FALSE)
+	(BootType Bunker))
+
+([FireDepartment_Class10147] of  Boots
+
+	(Available FALSE)
+	(BootType Wildland))
+
+([FireDepartment_Class10148] of  Boots
+
+	(Available FALSE)
+	(BootType Wildland))
+
+([FireDepartment_Class10149] of  Boots
+
+	(Available FALSE)
+	(BootType Station))
+
+([FireDepartment_Class10150] of  Boots
+
+	(Available FALSE)
+	(BootType Station))
+
+([FireDepartment_Class10151] of  Boots
+
+	(Available FALSE)
+	(BootType Bunker))
+
+([FireDepartment_Class10152] of  Boots
+
+	(Available FALSE)
+	(BootType Station))
+
+([FireDepartment_Class10153] of  Boots
+
+	(Available FALSE)
+	(BootType Wildland))
+
+([FireDepartment_Class10154] of  Boots
+
+	(Available FALSE)
+	(BootType Wildland))
+
+([FireDepartment_Class10155] of  Boots
+
+	(Available FALSE)
+	(BootType Station))
+
+([FireDepartment_Class10156] of  Boots
+
+	(Available FALSE)
+	(BootType Wildland))
+
+([FireDepartment_Class10157] of  Boots
+
+	(Available FALSE)
+	(BootType Bunker))
+
+([FireDepartment_Class10158] of  Boots
+
+	(Available FALSE)
+	(BootType Station))
+
+([FireDepartment_Class10159] of  Boots
+
+	(Available FALSE)
+	(BootType Station))
+
+([FireDepartment_Class10160] of  Boots
+
+	(Available FALSE)
+	(BootType Station))
+
+([FireDepartment_Class10161] of  Boots
+
+	(Available FALSE)
+	(BootType Bunker))
+
+([FireDepartment_Class10162] of  Boots
+
+	(Available FALSE)
+	(BootType Bunker))
+
+([FireDepartment_Class10163] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10164] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10165] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10166] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10167] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10168] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10169] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10170] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10171] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10172] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10173] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10174] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10175] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10176] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10177] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10178] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10179] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10180] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10181] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10182] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10183] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10184] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10185] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10186] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10187] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10188] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10189] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10190] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10191] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10192] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10193] of  Helmet
+
+	(Available TRUE))
+
+([FireDepartment_Class10194] of  Helmet
+
+	(Available FALSE))
+
+([FireDepartment_Class10195] of  Helmet
+
+	(Available FALSE))
+
+([FireDepartment_Class10196] of  Helmet
+
+	(Available FALSE))
+
+([FireDepartment_Class10197] of  Helmet
+
+	(Available FALSE))
+
+([FireDepartment_Class10198] of  Helmet
+
+	(Available FALSE))
+
+([FireDepartment_Class10199] of  Helmet
+
+	(Available FALSE))
+
+([FireDepartment_Class10200] of  Helmet
+
+	(Available FALSE))
+
+([FireDepartment_Class10201] of  Helmet
+
+	(Available FALSE))
+
+([FireDepartment_Class10202] of  Helmet
+
+	(Available FALSE))
+
+([FireDepartment_Class10203] of  Helmet
+
+	(Available FALSE))
+
+([FireDepartment_Class10204] of  Helmet
+
+	(Available FALSE))
+
+([FireDepartment_Class10205] of  Helmet
+
+	(Available FALSE))
+
+([FireDepartment_Class10206] of  Helmet
+
+	(Available FALSE))
+
+([FireDepartment_Class10207] of  Helmet
+
+	(Available FALSE))
+
+([FireDepartment_Class10208] of  Helmet
+
+	(Available FALSE))
+
+([FireDepartment_Class10209] of  Helmet
+
+	(Available FALSE))
+
+([FireDepartment_Class10210] of  Helmet
+
+	(Available FALSE))
+
+([FireDepartment_Class10211] of  Helmet
+
+	(Available FALSE))
+
+([FireDepartment_Class10212] of  Helmet
+
+	(Available FALSE))
+
+([FireDepartment_Class10213] of  Helmet
+
+	(Available FALSE))
+
+([FireDepartment_Class10214] of  Helmet
+
+	(Available FALSE))
+
+([FireDepartment_Class10215] of  Hose
+
+	(Available TRUE))
+
+([FireDepartment_Class10216] of  Hose
+
+	(Available TRUE)
+	(Meters 20.0))
+
+([FireDepartment_Class10217] of  Hose
+
+	(Available TRUE)
+	(Meters 20.0))
+
+([FireDepartment_Class10218] of  Hose
+
+	(Available TRUE)
+	(Meters 50.0))
+
+([FireDepartment_Class10219] of  Hose
+
+	(Available TRUE)
+	(Meters 5.0))
+
+([FireDepartment_Class10220] of  Hose
+
+	(Available TRUE)
+	(Meters 5.0))
+
+([FireDepartment_Class10221] of  Hose
+
+	(Available TRUE)
+	(Meters 10.0))
+
+([FireDepartment_Class10222] of  Hose
+
+	(Available TRUE)
+	(Meters 5.0))
+
+([FireDepartment_Class10223] of  Hose
+
+	(Available FALSE)
+	(Meters 10.0))
+
+([FireDepartment_Class10224] of  Hose
+
+	(Available FALSE)
+	(Meters 10.0))
+
+([FireDepartment_Class10225] of  Hose
+
+	(Available FALSE)
+	(Meters 10.0))
+
+([FireDepartment_Class10226] of  RadioCommunicator
+
+	(Available TRUE))
+
+([FireDepartment_Class10227] of  RadioCommunicator
+
+	(Available TRUE))
+
+([FireDepartment_Class10228] of  RadioCommunicator
+
+	(Available TRUE))
+
+([FireDepartment_Class10229] of  RadioCommunicator
+
+	(Available TRUE))
+
+([FireDepartment_Class10230] of  RadioCommunicator
+
+	(Available TRUE))
+
+([FireDepartment_Class10231] of  RadioCommunicator
+
+	(Available TRUE))
+
+([FireDepartment_Class10232] of  RadioCommunicator
+
+	(Available TRUE))
+
+([FireDepartment_Class10233] of  RadioCommunicator
+
+	(Available TRUE))
+
+([FireDepartment_Class10234] of  RadioCommunicator
+
+	(Available TRUE))
+
+([FireDepartment_Class10235] of  RadioCommunicator
+
+	(Available TRUE))
+
+([FireDepartment_Class10236] of  RadioCommunicator
+
+	(Available TRUE))
+
+([FireDepartment_Class10237] of  RadioCommunicator
+
+	(Available TRUE))
+
+([FireDepartment_Class10238] of  RadioCommunicator
+
+	(Available TRUE))
+
+([FireDepartment_Class10239] of  RadioCommunicator
+
+	(Available TRUE))
+
+([FireDepartment_Class10240] of  RadioCommunicator
+
+	(Available TRUE))
+
+([FireDepartment_Class10241] of  RadioCommunicator
+
+	(Available FALSE))
+
+([FireDepartment_Class10242] of  RadioCommunicator
+
+	(Available FALSE))
+
+([FireDepartment_Class10243] of  RadioCommunicator
+
+	(Available FALSE))
+
+([FireDepartment_Class10244] of  RadioCommunicator
+
+	(Available FALSE))
+
+([FireDepartment_Class10245] of  RadioCommunicator
+
+	(Available FALSE))
+
+([FireDepartment_Class10246] of  RadioCommunicator
+
+	(Available FALSE))
+
+([FireDepartment_Class10247] of  Suit
+
+	(Available TRUE)
+	(SuitType Proximity))
+
+([FireDepartment_Class10248] of  Suit
+
+	(Available TRUE)
+	(SuitType Entry))
+
+([FireDepartment_Class10249] of  Suit
+
+	(Available TRUE)
+	(SuitType Approach))
+
+([FireDepartment_Class10250] of  Suit
+
+	(Available TRUE)
+	(SuitType Entry))
+
+([FireDepartment_Class10251] of  Suit
+
+	(Available TRUE)
+	(SuitType Approach))
+
+([FireDepartment_Class10252] of  Suit
+
+	(Available TRUE)
+	(SuitType Proximity))
+
+([FireDepartment_Class10253] of  Suit
+
+	(Available TRUE)
+	(SuitType Proximity))
+
+([FireDepartment_Class10254] of  Suit
+
+	(Available TRUE)
+	(SuitType Approach))
+
+([FireDepartment_Class10255] of  Suit
+
+	(Available TRUE)
+	(SuitType Entry))
+
+([FireDepartment_Class10256] of  Suit
+
+	(Available TRUE)
+	(SuitType Proximity))
+
+([FireDepartment_Class10257] of  Suit
+
+	(Available TRUE)
+	(SuitType Proximity))
+
+([FireDepartment_Class10258] of  Suit
+
+	(Available TRUE)
+	(SuitType Approach))
+
+([FireDepartment_Class10259] of  Suit
+
+	(Available TRUE)
+	(SuitType Approach))
+
+([FireDepartment_Class10260] of  Suit
+
+	(Available TRUE)
+	(SuitType Approach))
+
+([FireDepartment_Class10261] of  Suit
+
+	(Available TRUE)
+	(SuitType Approach))
+
+([FireDepartment_Class10262] of  Suit
+
+	(Available TRUE)
+	(SuitType Entry))
+
+([FireDepartment_Class10263] of  Suit
+
+	(Available TRUE)
+	(SuitType Entry))
+
+([FireDepartment_Class10264] of  Suit
+
+	(Available TRUE)
+	(SuitType Entry))
+
+([FireDepartment_Class10265] of  Suit
+
+	(Available TRUE)
+	(SuitType Proximity))
+
+([FireDepartment_Class10266] of  Suit
+
+	(Available TRUE)
+	(SuitType Proximity))
+
+([FireDepartment_Class10267] of  Suit
+
+	(Available TRUE)
+	(SuitType Entry))
+
+([FireDepartment_Class10268] of  Suit
+
+	(Available TRUE)
+	(SuitType Approach))
+
+([FireDepartment_Class10269] of  Suit
+
+	(Available TRUE)
+	(SuitType Entry))
+
+([FireDepartment_Class10270] of  Suit
+
+	(Available TRUE)
+	(SuitType Proximity))
+
+([FireDepartment_Class10271] of  Suit
+
+	(Available TRUE)
+	(SuitType Entry))
+
+([FireDepartment_Class10272] of  Suit
+
+	(Available TRUE)
+	(SuitType Entry))
+
+([FireDepartment_Class10273] of  Suit
+
+	(Available TRUE)
+	(SuitType Entry))
+
+([FireDepartment_Class10274] of  Suit
+
+	(Available TRUE)
+	(SuitType Proximity))
+
+([FireDepartment_Class10275] of  Suit
+
+	(Available TRUE)
+	(SuitType Proximity))
+
+([FireDepartment_Class10276] of  Suit
+
+	(Available TRUE)
+	(SuitType Approach))
+
+([FireDepartment_Class10277] of  Suit
+
+	(Available TRUE)
+	(SuitType Approach))
+
+([FireDepartment_Class10278] of  Suit
+
+	(Available TRUE)
+	(SuitType Entry))
+
+([FireDepartment_Class10279] of  Suit
+
+	(Available TRUE)
+	(SuitType Proximity))
+
+([FireDepartment_Class10280] of  Suit
+
+	(Available TRUE)
+	(SuitType Entry))
+
+([FireDepartment_Class10281] of  Suit
+
+	(Available TRUE)
+	(SuitType Proximity))
+
+([FireDepartment_Class10282] of  Suit
+
+	(Available TRUE)
+	(SuitType Entry))
+
+([FireDepartment_Class10283] of  Suit
+
+	(Available TRUE)
+	(SuitType Proximity))
+
+([FireDepartment_Class10284] of  Suit
+
+	(Available FALSE)
+	(SuitType Entry))
+
+([FireDepartment_Class10285] of  Suit
+
+	(Available FALSE)
+	(SuitType Entry))
+
+([FireDepartment_Class10286] of  Suit
+
+	(Available FALSE)
+	(SuitType Approach))
+
+([FireDepartment_Class10287] of  Suit
+
+	(Available FALSE)
+	(SuitType Entry))
+
+([FireDepartment_Class10288] of  Suit
+
+	(Available FALSE)
+	(SuitType Approach))
+
+([FireDepartment_Class10289] of  Suit
+
+	(Available FALSE)
+	(SuitType Proximity))
+
+([FireDepartment_Class10290] of  Suit
+
+	(Available FALSE)
+	(SuitType Proximity))
+
+([FireDepartment_Class10291] of  Suit
+
+	(Available FALSE)
+	(SuitType Approach))
+
+([FireDepartment_Class10292] of  Suit
+
+	(Available FALSE)
+	(SuitType Proximity))
+
+([FireDepartment_Class10293] of  FireTruck
+
+	(Available TRUE)
+	(Type Small))
+
+([FireDepartment_Class10294] of  FireTruck
+
+	(Available TRUE)
+	(Type Small))
+
+([FireDepartment_Class10295] of  FireTruck
+
+	(Available TRUE)
+	(Type Small))
+
+([FireDepartment_Class10296] of  FireTruck
+
+	(Available FALSE)
+	(Type Small))
+
+([FireDepartment_Class10297] of  FireTruck
+
+	(Available FALSE)
+	(Type Small))
+
+([FireDepartment_Class10298] of  FireTruck
+
+	(Available TRUE)
+	(Type Medium))
+
+([FireDepartment_Class10299] of  FireTruck
+
+	(Available TRUE)
+	(Type Medium))
+
+([FireDepartment_Class10300] of  FireTruck
+
+	(Available FALSE)
+	(Type Medium))
+
+([FireDepartment_Class10301] of  FireTruck
+
+	(Available FALSE)
+	(Type Large))
+
+([FireDepartment_Class10302] of  FireTruck
+
+	(Available TRUE)
+	(Type Large))
+
+([FireDepartment_Class10303] of  Earthquake
+
+	(Location "Rafina")
+	(Solved FALSE))
+
+([FireDepartment_Class10304] of  Pilot
+
+	(Available TRUE)
+	(DrivableVehicles Plane)
+	(Name "George Michael")
+	(Rank 1))
+
+([FireDepartment_Class2] of  CarCrash
+
+	(Location "Syggrou"))
+
+([FireDepartment_Class20002] of  FireTruck
+
+	(Available FALSE)
+	(Type Small))
+
+([FireDepartment_Class3] of  Earthquake
+
+	(Location "Acropolis")
+	(Solved TRUE))
+
+([FireDepartment_Class39] of  Pilot
+
+	(Available TRUE)
+	(DrivableVehicles
+		Helicopter
+		Plane)
+	(Name "Babis Potteridis")
+	(Rank 1))
+
+([FireDepartment_Class40] of  Driver
+
+	(Available TRUE)
+	(Name "Loukas Malfoy")
+	(Rank 1)
+	(TruckType Small Medium))
+
+([FireDepartment_Class41] of  Pilot
+
+	(DrivableVehicles Plane)
+	(Name "John Smith")
+	(Rank 2))
+
+([FireDepartment_Class5] of  Fire+Department
+
+	(DepartmentName "Attica Fire Department"))

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/ExhibitResource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+id = "blindman"
+name = "The Blind Man"
+description = "The Blind Man (1868), Léopold Harzé (1 831 - 1893), Terracotta. 
+Royal Museums of Fine Arts of Belgium (Brussels, Belgium)."
+cost = 1500

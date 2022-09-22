@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/ExhibitResource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+id = "thescream"
+name = "The Scream"
+description = "The Scream is the popular name given to a composition created by Norwegian artist Edvard Munch in 1893. The agonized face in the painting has become one of the most iconic images of art, seen as symbolizing the anxiety of the human condition. Munch's work, including The Scream, would go on to have a formative influence on the Expressionist movement.
+
+Munch recalled that he had been out for a walk at sunset when suddenly the setting sun's light turned the clouds \"a blood red\". He sensed an \"infinite scream passing through nature\". Scholars have located the spot to a fjord overlooking Oslo and have suggested other explanations for the unnaturally orange sky, ranging from the effects of a volcanic eruption to a psychological reaction by Munch to his sister's commitment at a nearby lunatic asylum.
+
+Munch created two versions in paint and two in pastels, as well as a lithograph stone from which several prints survive. Both painted versions have been stolen, but since recovered. One of the pastel versions commanded the fourth highest nominal price paid for an artwork at a public auction. The Norwegian title is Skrik (Shriek), and the German title was Der Schrei der Natur (The Scream of Nature)."
+cost = 3000

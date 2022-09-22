@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/base_theme.tres" type="Theme" id=1]
+
+[node name="InfoPopUp" type="Node2D"]
+
+[node name="WindowDialog" type="WindowDialog" parent="."]
+visible = true
+margin_left = 327.0
+margin_top = 179.0
+margin_right = 798.0
+margin_bottom = 379.0
+theme = ExtResource( 1 )
+window_title = "Popup Title"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="WindowDialog"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="WindowDialog/VBoxContainer"]
+margin_right = 451.0
+margin_bottom = 156.0
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "Hello [color=blue]blue[/color]"
+text = "Hello blue"
+scroll_following = true
+
+[node name="Button" type="Button" parent="WindowDialog/VBoxContainer"]
+margin_top = 160.0
+margin_right = 451.0
+margin_bottom = 180.0
+text = "Add to cart"

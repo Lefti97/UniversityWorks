@@ -1,0 +1,340 @@
+; Tue Jun 07 22:53:07 EEST 2022
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(multislot VehicleType
+		(type SYMBOL)
+;+		(allowed-parents Vehicles)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot FireDepartment_Class10036
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot FireDepartment_Class30003
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot FireDepartment_Class11
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot FireDepartment_Class10
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot FireDepartment_Class14
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot FireDepartment_Class30005
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Type
+		(type SYMBOL)
+		(allowed-values Small Medium Large)
+		(default Small)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot TruckType
+		(type SYMBOL)
+		(allowed-values Small Medium Large)
+		(default Small)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot Severity
+		(type INTEGER)
+		(range 1 5)
+		(default 1)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Solved
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Salary
+		(type FLOAT)
+		(range 0.0 %3FVARIABLE)
+		(default 0.0)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot SuitType
+		(type SYMBOL)
+		(allowed-values Entry Proximity Approach)
+		(default Entry)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot BootType
+		(type SYMBOL)
+		(allowed-values Wildland Bunker Station)
+		(default Station)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Rank
+		(type INTEGER)
+		(range 1 1)
+		(default 1)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Location
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot DrivableVehicles
+		(type SYMBOL)
+;+		(allowed-parents Vehicles)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot Available
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(default TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot FireDepartment_Class20003
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot DepartmentName
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot FireDepartment_Class10004
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Name
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot FireDepartment_Class10000
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Meters
+		(type FLOAT)
+		(range 1.0 %3FVARIABLE)
+		(default 1.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Emergency+cases
+	(is-a USER)
+	(role abstract)
+	(single-slot Location
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Solved
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass BuildingFire
+	(is-a Emergency+cases)
+	(role concrete))
+
+(defclass ForestFire
+	(is-a Emergency+cases)
+	(role concrete))
+
+(defclass HazardousMaterial
+	(is-a Emergency+cases)
+	(role concrete))
+
+(defclass Flood
+	(is-a Emergency+cases)
+	(role concrete))
+
+(defclass CarCrash
+	(is-a Emergency+cases)
+	(role concrete))
+
+(defclass Earthquake
+	(is-a Emergency+cases)
+	(role concrete))
+
+(defclass Equipment
+	(is-a USER)
+	(role abstract)
+	(single-slot Available
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(default TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Suit
+	(is-a Equipment)
+	(role concrete)
+	(single-slot SuitType
+		(type SYMBOL)
+		(allowed-values Entry Proximity Approach)
+		(default Entry)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Boots
+	(is-a Equipment)
+	(role concrete)
+	(single-slot BootType
+		(type SYMBOL)
+		(allowed-values Wildland Bunker Station)
+		(default Station)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Helmet
+	(is-a Equipment)
+	(role concrete))
+
+(defclass Hose
+	(is-a Equipment)
+	(role concrete)
+	(single-slot Meters
+		(type FLOAT)
+		(range 1.0 %3FVARIABLE)
+		(default 1.0)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass RadioCommunicator
+	(is-a Equipment)
+	(role concrete))
+
+(defclass Axe
+	(is-a Equipment)
+	(role concrete))
+
+(defclass Vehicles
+	(is-a Equipment)
+	(role abstract)
+	(single-slot Type
+		(type SYMBOL)
+		(allowed-values Small Medium Large)
+		(default Small)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass FireTruck
+	(is-a Vehicles)
+	(role concrete)
+	(single-slot FireDepartment_Class10000
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Plane
+	(is-a Vehicles)
+	(role concrete))
+
+(defclass Helicopter
+	(is-a Vehicles)
+	(role concrete))
+
+(defclass Staff
+	(is-a USER)
+	(role concrete)
+	(single-slot Available
+		(type SYMBOL)
+		(allowed-values FALSE TRUE)
+		(default TRUE)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Rank
+		(type INTEGER)
+		(range 1 1)
+		(default 1)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Name
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass FireFighter
+	(is-a Staff)
+	(role concrete))
+
+(defclass VehicleOperator
+	(is-a Staff)
+	(role abstract))
+
+(defclass Pilot
+	(is-a VehicleOperator)
+	(role concrete)
+	(multislot DrivableVehicles
+		(type SYMBOL)
+;+		(allowed-parents Vehicles)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Driver
+	(is-a VehicleOperator)
+	(role concrete)
+	(multislot TruckType
+		(type SYMBOL)
+		(allowed-values Small Medium Large)
+		(default Small)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Mechanic
+	(is-a Staff)
+	(role concrete)
+	(multislot VehicleType
+		(type SYMBOL)
+;+		(allowed-parents Vehicles)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass CallOperator
+	(is-a Staff)
+	(role concrete))
+
+(defclass Volunteer
+	(is-a Staff)
+	(role concrete)
+	(single-slot Rank
+		(type INTEGER)
+		(range 1 1)
+		(default 1)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Fire+Department
+	(is-a USER)
+	(role concrete)
+	(single-slot DepartmentName
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write)))
+
+(defclass Services
+	(is-a USER)
+	(role abstract))
+
+(defclass Rescue
+	(is-a Services)
+	(role concrete))
+
+(defclass DispatchUnit
+	(is-a Services)
+	(role concrete))
+
+(defclass ReceiveCall
+	(is-a Services)
+	(role concrete))
+
+(defclass FireExtinguish
+	(is-a Services)
+	(role concrete))

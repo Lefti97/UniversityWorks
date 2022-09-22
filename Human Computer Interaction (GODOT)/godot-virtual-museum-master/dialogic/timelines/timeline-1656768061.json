@@ -1,0 +1,149 @@
+{
+	"events": [
+		{
+			"animation": "[Default]",
+			"animation_length": 0,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1656768135.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": true,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "character-1656768135.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Καλωσήρθες στο μουσείο!"
+		},
+		{
+			"event_id": "dialogic_015",
+			"id": "anchor-1634488067",
+			"index": 0,
+			"name": "Loop"
+		},
+		{
+			"character": "character-1656768135.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Πως μπορώ να βοηθήσω;"
+		},
+		{
+			"choice": "Τι εκθέματα έχει το μουσείο;",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1656768135.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Το μουσείο έχει διάφορα αγάλματα και πίνακες, ενώ στο τέλος θα βρεις και ένα ντοκιμαντέρ."
+		},
+		{
+			"character": "character-1656768135.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Αν θες να μάθεις περισσότερα για ένα έκθεμα μπορείς να διαβάσεις την περιγραφή του πατώντας `E` στο βιβλίο δίπλα του."
+		},
+		{
+			"anchor_id": "anchor-1634488067",
+			"event_id": "dialogic_016"
+		},
+		{
+			"choice": "Πως μπορώ να αγοράσω αντίγραφα των εκθεμάτων;",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1656768135.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Συμβαίνει συχνά να αρέσουν τα εκθέματά μας, οπότε έχουμε φροντήσει να πουλάμε αντίγραφα."
+		},
+		{
+			"character": "character-1656768135.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Όταν διαβάζεις μια περιγραφή σου δίνεται η επιλογή να προσθέσεις ένα αντίγραφο του εκθέματος στο καλάθι σου."
+		},
+		{
+			"character": "character-1656768135.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Πατώντας `Z` μπορείς να δεις τι έχεις στο καλάθι σου και να αφαιρέσεις πράγματα αν άλλαξες γνώμη.\nΑπό εκεί μπορείς να προχωρήσεις σε αγορά, ή, αν προτιμάς, έλα σε εμένα για να κάνεις την αγορά."
+		},
+		{
+			"anchor_id": "anchor-1634488067",
+			"event_id": "dialogic_016"
+		},
+		{
+			"choice": "Θέλω να δω το καλάθι μου και να κάνω αγορά!",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1656768135.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ήρθες στο κατάλληλο άτομο!"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "open_cart",
+				"target_node_path": "/root/Level/UIManager"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0
+		},
+		{
+			"choice": "Αυτά είναι όλα",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1656768135.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Καλή μάθηση.."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 0.8
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.2 - Dev",
+		"file": "timeline-1656768061.json",
+		"name": "simple_timeline"
+	}
+}
