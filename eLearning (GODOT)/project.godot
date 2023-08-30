@@ -1,0 +1,75 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+_global_script_classes=[{
+"base": "Control",
+"class": &"Chapter",
+"language": &"GDScript",
+"path": "res://Scenes/Chapters/Chapter.gd"
+}, {
+"base": "Button",
+"class": &"ChapterButton",
+"language": &"GDScript",
+"path": "res://Scenes/ChapterButton.gd"
+}, {
+"base": "HBoxContainer",
+"class": &"MatchQuizItem",
+"language": &"GDScript",
+"path": "res://Scenes/Quiz/MatchQuiz/MatchQuizItem.gd"
+}, {
+"base": "Control",
+"class": &"MultipleChoice",
+"language": &"GDScript",
+"path": "res://Scenes/Quiz/MultipleChoice.gd"
+}, {
+"base": "Node",
+"class": &"QuizData",
+"language": &"GDScript",
+"path": "res://QuizData.gd"
+}, {
+"base": "PanelContainer",
+"class": &"QuizManager",
+"language": &"GDScript",
+"path": "res://Scenes/QuizManager.gd"
+}, {
+"base": "Node",
+"class": &"Statistics",
+"language": &"GDScript",
+"path": "res://Scenes/Statistics.gd"
+}]
+_global_script_class_icons={
+"Chapter": "",
+"ChapterButton": "",
+"MatchQuizItem": "",
+"MultipleChoice": "",
+"QuizData": "",
+"QuizManager": "",
+"Statistics": ""
+}
+
+[application]
+
+config/name="ELearning"
+run/main_scene="res://Scenes/Dashboard.tscn"
+config/features=PackedStringArray("4.0")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Notify="*res://Scenes/notify.tscn"
+
+[dotnet]
+
+project/assembly_name="ELearning"
+
+[rendering]
+
+environment/defaults/default_clear_color=Color(0.941176, 0.941176, 0.941176, 1)
+anti_aliasing/quality/msaa_2d=2

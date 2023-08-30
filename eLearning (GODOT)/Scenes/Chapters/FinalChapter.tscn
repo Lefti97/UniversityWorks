@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0j7mls87rvlf"]
+
+[ext_resource type="Script" path="res://Scenes/Chapters/Chapter.gd" id="1_y2dgw"]
+
+[node name="FinalChapter" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y2dgw")
+number = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Ολοκλήρωσες όλα τα κεφάλαια! Μπορείς να προχωρήσεις στην τελική αξιολόγηση για να δεις τις ικανότητες σου!"

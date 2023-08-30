@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=3 uid="uid://ct437nkg6fm63"]
+
+[ext_resource type="Script" path="res://Scenes/Quiz/MatchQuiz/MatchQuiz.gd" id="2_8reid"]
+
+[node name="Match" type="Control" node_paths=PackedStringArray("a_column", "b_column", "line")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_8reid")
+a_column = NodePath("VB/HB/A")
+b_column = NodePath("VB/HB/B")
+line = NodePath("Line2d")
+metadata/_edit_vertical_guides_ = []
+metadata/_edit_horizontal_guides_ = []
+
+[node name="VB" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VB"]
+offset_top = 140.0
+offset_right = 1152.0
+offset_bottom = 163.0
+size_flags_vertical = 6
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HB" type="HBoxContainer" parent="VB"]
+offset_top = 308.0
+offset_right = 1152.0
+offset_bottom = 613.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="A" type="VBoxContainer" parent="VB/HB"]
+offset_right = 574.0
+offset_bottom = 305.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="B" type="VBoxContainer" parent="VB/HB"]
+offset_left = 578.0
+offset_right = 1152.0
+offset_bottom = 305.0
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="NextButton" type="Button" parent="VB"]
+unique_name_in_owner = true
+offset_top = 617.0
+offset_right = 1152.0
+offset_bottom = 648.0
+text = "Επόμενο"
+
+[node name="Line2d" type="Line2D" parent="."]
+width = 4.0
+default_color = Color(0.18, 0.18, 0.18, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true

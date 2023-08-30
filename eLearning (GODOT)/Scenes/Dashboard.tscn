@@ -1,0 +1,329 @@
+[gd_scene load_steps=13 format=3 uid="uid://dh7cr7xg10sbp"]
+
+[ext_resource type="Script" path="res://Scenes/Study.gd" id="1_hi4fg"]
+[ext_resource type="Theme" uid="uid://dont5x06omdfv" path="res://light_theme.tres" id="1_vdsir"]
+[ext_resource type="Script" path="res://Scenes/ChapterButton.gd" id="2_0llvi"]
+[ext_resource type="PackedScene" uid="uid://cooaf5m6lxnlg" path="res://Scenes/Chapters/Chapter1.tscn" id="3_r5mrx"]
+[ext_resource type="PackedScene" uid="uid://cwgx3idkdrb3n" path="res://Scenes/Chapters/Chapter2.tscn" id="4_ftohq"]
+[ext_resource type="PackedScene" uid="uid://bkpochf528g0d" path="res://Scenes/Chapters/Chapter3.tscn" id="5_8qbor"]
+[ext_resource type="Script" path="res://Scenes/QuizManager.gd" id="6_nkiam"]
+[ext_resource type="PackedScene" uid="uid://c0j7mls87rvlf" path="res://Scenes/Chapters/FinalChapter.tscn" id="7_vytry"]
+[ext_resource type="Script" path="res://Scenes/Statistics.gd" id="8_01pm6"]
+[ext_resource type="Script" path="res://Scenes/Help.gd" id="8_5hdey"]
+[ext_resource type="Script" path="res://Scenes/ThemeSwitcher.gd" id="9_48gui"]
+[ext_resource type="Theme" uid="uid://d12x2bwcnwaer" path="res://dark _theme.tres" id="10_aeylh"]
+
+[node name="Dashboard" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_vdsir")
+metadata/_edit_vertical_guides_ = [160.0]
+metadata/_edit_horizontal_guides_ = [31.0]
+
+[node name="TabContainer" type="TabContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Εκπαίδευση" type="PanelContainer" parent="TabContainer" node_paths=PackedStringArray("final_evaluation_button", "study_container", "quiz_manager", "previous_button", "next_button", "tab_container")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hi4fg")
+final_evaluation_button = NodePath("HB/MC/Chapters/VB/FinalChapter")
+study_container = NodePath("HB/PC/MC/TC/Κεφάλαια/HBC/Content")
+quiz_manager = NodePath("HB/PC/MC/TC/Aξιολόγηση")
+previous_button = NodePath("HB/PC/MC/TC/Κεφάλαια/HBC/Previous")
+next_button = NodePath("HB/PC/MC/TC/Κεφάλαια/HBC/Next")
+tab_container = NodePath("HB/PC/MC/TC")
+
+[node name="HB" type="HSplitContainer" parent="TabContainer/Εκπαίδευση"]
+offset_right = 1152.0
+offset_bottom = 617.0
+
+[node name="MC" type="MarginContainer" parent="TabContainer/Εκπαίδευση/HB"]
+custom_minimum_size = Vector2i(100, 0)
+offset_right = 168.0
+offset_bottom = 617.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Chapters" type="VBoxContainer" parent="TabContainer/Εκπαίδευση/HB/MC"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 158.0
+offset_bottom = 607.0
+
+[node name="Chapter1" type="Button" parent="TabContainer/Εκπαίδευση/HB/MC/Chapters"]
+unique_name_in_owner = true
+offset_right = 148.0
+offset_bottom = 31.0
+text = "Κεφάλαιο 1"
+script = ExtResource("2_0llvi")
+chapter_data = ExtResource("3_r5mrx")
+
+[node name="Chapter2" type="Button" parent="TabContainer/Εκπαίδευση/HB/MC/Chapters"]
+unique_name_in_owner = true
+offset_top = 35.0
+offset_right = 148.0
+offset_bottom = 66.0
+text = "Κεφάλαιο 2"
+script = ExtResource("2_0llvi")
+chapter_data = ExtResource("4_ftohq")
+
+[node name="Chapter3" type="Button" parent="TabContainer/Εκπαίδευση/HB/MC/Chapters"]
+unique_name_in_owner = true
+offset_top = 70.0
+offset_right = 148.0
+offset_bottom = 101.0
+text = "Κεφάλαιο 3"
+script = ExtResource("2_0llvi")
+chapter_data = ExtResource("5_8qbor")
+
+[node name="VB" type="HBoxContainer" parent="TabContainer/Εκπαίδευση/HB/MC/Chapters"]
+offset_top = 105.0
+offset_right = 148.0
+offset_bottom = 136.0
+
+[node name="FinalChapter" type="Button" parent="TabContainer/Εκπαίδευση/HB/MC/Chapters/VB"]
+unique_name_in_owner = true
+offset_right = 128.0
+offset_bottom = 31.0
+disabled = true
+text = "Τελική Εξέταση"
+script = ExtResource("2_0llvi")
+chapter_data = ExtResource("7_vytry")
+
+[node name="Help" type="Button" parent="TabContainer/Εκπαίδευση/HB/MC/Chapters/VB"]
+offset_left = 132.0
+offset_right = 148.0
+offset_bottom = 31.0
+text = "?"
+script = ExtResource("8_5hdey")
+help_message = "Για να λάβεις μέρος στην τελική εξέταση, πρέπει πρώτα να
+περάσεις την αξιολόγηση κάθε κεφαλαίου με βαθμό >= 5.0.
+Για να δεις τις βαθμολογίες σου μέχρι τώρα, μπορείς να επιλέξεις την
+καρτέλα 'Στατιστικά'."
+
+[node name="HB" type="HBoxContainer" parent="TabContainer/Εκπαίδευση/HB/MC/Chapters"]
+offset_top = 566.0
+offset_right = 148.0
+offset_bottom = 597.0
+size_flags_vertical = 10
+alignment = 1
+
+[node name="ThemeButton" type="CheckButton" parent="TabContainer/Εκπαίδευση/HB/MC/Chapters/HB"]
+offset_left = 24.0
+offset_right = 123.0
+offset_bottom = 31.0
+text = "Νύχτα;"
+script = ExtResource("9_48gui")
+light_theme = ExtResource("1_vdsir")
+dark_theme = ExtResource("10_aeylh")
+
+[node name="PC" type="Control" parent="TabContainer/Εκπαίδευση/HB"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 180.0
+offset_right = 1152.0
+offset_bottom = 617.0
+
+[node name="MC" type="MarginContainer" parent="TabContainer/Εκπαίδευση/HB/PC"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TC" type="TabContainer" parent="TabContainer/Εκπαίδευση/HB/PC/MC"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 962.0
+offset_bottom = 607.0
+
+[node name="Κεφάλαια" type="Control" parent="TabContainer/Εκπαίδευση/HB/PC/MC/TC"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBC" type="HBoxContainer" parent="TabContainer/Εκπαίδευση/HB/PC/MC/TC/Κεφάλαια"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Previous" type="Button" parent="TabContainer/Εκπαίδευση/HB/PC/MC/TC/Κεφάλαια/HBC"]
+offset_top = 267.0
+offset_right = 116.0
+offset_bottom = 298.0
+size_flags_vertical = 4
+text = "Προηγούμενο"
+
+[node name="Content" type="PanelContainer" parent="TabContainer/Εκπαίδευση/HB/PC/MC/TC/Κεφάλαια/HBC"]
+offset_left = 120.0
+offset_right = 872.0
+offset_bottom = 566.0
+size_flags_horizontal = 3
+
+[node name="Next" type="Button" parent="TabContainer/Εκπαίδευση/HB/PC/MC/TC/Κεφάλαια/HBC"]
+offset_left = 876.0
+offset_top = 267.0
+offset_right = 952.0
+offset_bottom = 298.0
+size_flags_vertical = 4
+text = "Επόμενο"
+
+[node name="Aξιολόγηση" type="PanelContainer" parent="TabContainer/Εκπαίδευση/HB/PC/MC/TC"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_nkiam")
+
+[node name="WelcomePanel" type="PanelContainer" parent="TabContainer/Εκπαίδευση/HB/PC/MC"]
+unique_name_in_owner = true
+visible = false
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 962.0
+offset_bottom = 607.0
+
+[node name="MC" type="MarginContainer" parent="TabContainer/Εκπαίδευση/HB/PC/MC/WelcomePanel"]
+offset_right = 1011.0
+offset_bottom = 597.0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/Εκπαίδευση/HB/PC/MC/WelcomePanel/MC"]
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 961.0
+offset_bottom = 597.0
+theme_override_font_sizes/normal_font_size = 20
+text = "Καλώς ήρθες στην πλατφόρμα ηλεκτρονικής μάθησης! Για να ξεκινήσης την εκπαίδευση σου, διάλεξε ένα κεφάλαιο από την στήλη που βρίσκεται στα αριστερά σου!"
+
+[node name="QuizCompletePanel" type="PanelContainer" parent="TabContainer/Εκπαίδευση/HB/PC/MC"]
+unique_name_in_owner = true
+visible = false
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 962.0
+offset_bottom = 607.0
+
+[node name="MC" type="MarginContainer" parent="TabContainer/Εκπαίδευση/HB/PC/MC/QuizCompletePanel"]
+offset_right = 1003.0
+offset_bottom = 597.0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 0
+
+[node name="Message" type="RichTextLabel" parent="TabContainer/Εκπαίδευση/HB/PC/MC/QuizCompletePanel/MC"]
+offset_left = 50.0
+offset_top = 50.0
+offset_right = 953.0
+offset_bottom = 597.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center][wave amp=50 freq=2]Ολοκλήρωσες την αξιολόγηση! Συγχαρητήρια![/wave][/center]
+
+[center]Ολοκλήρωσες [b]{score}[/b] από τα [b]{total}[/b] quiz.
+Ο τελικός σου βαθμός είναι [b]{grade}[/b].[/center]"
+
+[node name="Στατιστικά" type="PanelContainer" parent="TabContainer" node_paths=PackedStringArray("grades_container", "quizes_container")]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("8_01pm6")
+grades_container = NodePath("MC/VB/VB/Grades/VB")
+quizes_container = NodePath("MC/VB/VB/Questions/VB")
+
+[node name="MC" type="MarginContainer" parent="TabContainer/Στατιστικά"]
+offset_right = 1152.0
+offset_bottom = 617.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VB" type="VBoxContainer" parent="TabContainer/Στατιστικά/MC"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 1142.0
+offset_bottom = 607.0
+
+[node name="Label" type="Label" parent="TabContainer/Στατιστικά/MC/VB"]
+offset_right = 1132.0
+offset_bottom = 26.0
+text = "Εδώ μπορείς να δεις πληροφορίες για τις βαθμολογίες σου και διάφορα άλλα στατιστικά"
+
+[node name="VB" type="VBoxContainer" parent="TabContainer/Στατιστικά/MC/VB"]
+offset_top = 30.0
+offset_right = 1132.0
+offset_bottom = 597.0
+size_flags_vertical = 3
+
+[node name="Grades" type="VBoxContainer" parent="TabContainer/Στατιστικά/MC/VB/VB"]
+offset_right = 1132.0
+offset_bottom = 30.0
+
+[node name="Title" type="Label" parent="TabContainer/Στατιστικά/MC/VB/VB/Grades"]
+offset_right = 1132.0
+offset_bottom = 26.0
+text = "Βαθμολογίες:"
+
+[node name="VB" type="VBoxContainer" parent="TabContainer/Στατιστικά/MC/VB/VB/Grades"]
+offset_top = 30.0
+offset_right = 1132.0
+offset_bottom = 30.0
+
+[node name="Questions" type="VBoxContainer" parent="TabContainer/Στατιστικά/MC/VB/VB"]
+offset_top = 34.0
+offset_right = 1132.0
+offset_bottom = 64.0
+
+[node name="Title" type="Label" parent="TabContainer/Στατιστικά/MC/VB/VB/Questions"]
+offset_right = 1132.0
+offset_bottom = 26.0
+text = "Ερωτήσεις:"
+
+[node name="VB" type="VBoxContainer" parent="TabContainer/Στατιστικά/MC/VB/VB/Questions"]
+offset_top = 30.0
+offset_right = 1132.0
+offset_bottom = 30.0
+
+[connection signal="pressed" from="TabContainer/Εκπαίδευση/HB/MC/Chapters/Chapter1" to="TabContainer/Εκπαίδευση" method="_on_chapter_1_pressed"]
+[connection signal="pressed" from="TabContainer/Εκπαίδευση/HB/MC/Chapters/Chapter2" to="TabContainer/Εκπαίδευση" method="_on_chapter_2_pressed"]
+[connection signal="pressed" from="TabContainer/Εκπαίδευση/HB/MC/Chapters/Chapter3" to="TabContainer/Εκπαίδευση" method="_on_chapter_3_pressed"]
+[connection signal="pressed" from="TabContainer/Εκπαίδευση/HB/MC/Chapters/VB/FinalChapter" to="TabContainer/Εκπαίδευση" method="_on_final_pressed"]
+[connection signal="pressed" from="TabContainer/Εκπαίδευση/HB/MC/Chapters/VB/Help" to="TabContainer/Εκπαίδευση/HB/MC/Chapters/VB/Help" method="display_help"]
+[connection signal="toggled" from="TabContainer/Εκπαίδευση/HB/MC/Chapters/HB/ThemeButton" to="TabContainer/Εκπαίδευση/HB/MC/Chapters/HB/ThemeButton" method="toggle_theme"]

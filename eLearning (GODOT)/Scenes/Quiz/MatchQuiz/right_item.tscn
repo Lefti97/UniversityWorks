@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxpv3j8n1mfea"]
+
+[ext_resource type="Script" path="res://Scenes/Quiz/MatchQuiz/MatchQuizItem.gd" id="1_4x6qn"]
+
+[node name="RightItem" type="HBoxContainer" node_paths=PackedStringArray("button")]
+offset_right = 146.0
+offset_bottom = 26.0
+alignment = 1
+script = ExtResource("1_4x6qn")
+button = NodePath("CheckBox")
+
+[node name="CheckBox" type="CheckBox" parent="."]
+offset_right = 24.0
+offset_bottom = 26.0
+toggle_mode = false
+
+[node name="Anchor" type="Control" parent="CheckBox"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+offset_left = 28.0
+offset_right = 146.0
+offset_bottom = 26.0
+text = "KEKW PEPEGAS"
+horizontal_alignment = 1
+vertical_alignment = 1

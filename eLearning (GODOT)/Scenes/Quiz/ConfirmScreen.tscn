@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://c28hvpd5wihv3"]
+
+[ext_resource type="Script" path="res://Scenes/Quiz/ConfirmScreen.gd" id="1_62p7n"]
+
+[node name="ConfirmScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_62p7n")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+offset_top = 267.0
+offset_right = 1152.0
+offset_bottom = 345.0
+text = "Προσοχή! Αφού ξεκινήσεις την διαδικασία αξιολόγησης,
+δεν θα μπορέσεις να αλλάξεις κεφάλαιο ή να μεταβείς στην καρτέλα του τρέχων κεφάλαιου
+μέχρι να ολοκληρώσεις την αξιολόγηση."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+offset_left = 538.0
+offset_top = 349.0
+offset_right = 614.0
+offset_bottom = 380.0
+size_flags_horizontal = 4
+text = "Επόμενο"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

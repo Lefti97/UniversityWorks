@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://4qjbsneqcx8y"]
+
+[ext_resource type="Script" path="res://Scenes/StatEntry.gd" id="1_mfhnu"]
+
+[node name="StatEntry" type="HBoxContainer" node_paths=PackedStringArray("title_node", "value_node")]
+offset_right = 1152.0
+offset_bottom = 26.0
+script = ExtResource("1_mfhnu")
+title_node = NodePath("Title")
+value_node = NodePath("Value")
+
+[node name="Title" type="Label" parent="."]
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 24.0
+
+[node name="Column" type="Label" parent="."]
+offset_left = 5.0
+offset_right = 10.0
+offset_bottom = 26.0
+text = ":
+"
+
+[node name="Value" type="Label" parent="."]
+offset_left = 14.0
+offset_top = 1.0
+offset_right = 15.0
+offset_bottom = 24.0
+tooltip_text = "Εδώ βλέπεις όλες τις προσάθειες που έχεις για το συγκεκριμένο κεφάλαιο,
+ από την πρώτη(αριστερά) μέχρι και την πιο πρόσφατη(δεξιά)."
+mouse_filter = 1
