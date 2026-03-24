@@ -1,0 +1,522 @@
+ΑΣΚΗΣΗ 1η
+
+1.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ nl ask1.txt
+     1	George Pappas george2 12136 Peristeri -------
+     2	Nick Nikolaoy nick23 12232 Aigaleo 5314555
+     3	George Georgioy george583 11132 Athens ------- 
+     4	Helen Georgioy helen3 12136 Peristeri 5748456
+     5	Nick Pappas nick4 11223 Aigaleo 5324123
+     6	Helen Ioannoy helen367 13222 Athens -------
+     7	Helen Thanoy helen36 11132 Peristeri 9718345
+     8	Vasilis Mamalis vas32 12345 Dafni 9738383
+
+2.------------------------------------------------------------------
+
+Εκτυπώνει τον τρέχον, τον προηγούμενο και τον επόμενο μήνα(cal -3) στο αρχείο calfile.txt (> calfile.txt).
+
+3.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ cat calfile.txt ask1.txt>full.txt
+
+ΠΕΡΙΕΧΟΜΕΝΑ full.txt
+                            2019
+     Οκτωβρίου             Νοεμβρίου             Δεκεμβρίου       
+Κυ Δε Τρ Τε Πε Πα Σα  Κυ Δε Τρ Τε Πε Πα Σα  Κυ Δε Τρ Τε Πε Πα Σα  
+       1  2  3  4  5                  1  2   1  2  3  4  5  6  7  
+ 6  7  8  9 10 11 12   3  4  5  6  7 _# _#8  9   8  9 10 11 12 13 14  
+13 14 15 16 17 18 19  10 11 12 13 14 15 16  15 16 17 18 19 20 21  
+20 21 22 23 24 25 26  17 18 19 20 21 22 23  22 23 24 25 26 27 28  
+27 28 29 30 31        24 25 26 27 28 29 30  29 30 31              
+                                                                  
+﻿George Pappas george2 12136 Peristeri -------
+Nick Nikolaoy nick23 12232 Aigaleo 5314555
+George Georgioy george583 11132 Athens ------- 
+Helen Georgioy helen3 12136 Peristeri 5748456
+Nick Pappas nick4 11223 Aigaleo 5324123
+Helen Ioannoy helen367 13222 Athens -------
+Helen Thanoy helen36 11132 Peristeri 9718345
+Vasilis Mamalis vas32 12345 Dafni 9738383
+
+4.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ ls -t | head -5
+full.txt
+calfile.txt
+ask1.txt
+Downloads
+Programs
+
+5.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ mkdir mydir1
+lefti97@BigRedLaptop:~$ cd mydir1
+lefti97@BigRedLaptop:~/mydir1$ cp ../full.txt .
+lefti97@BigRedLaptop:~/mydir1$ mv full.txt new.txt
+lefti97@BigRedLaptop:~/mydir1$ cd ..
+lefti97@BigRedLaptop:~$ rm -rd mydir1
+
+6.------------------------------------------------------------------
+
+α)
+lefti97@BigRedLaptop:~$ ls -si ../../usr
+
+β)
+lefti97@BigRedLaptop:~$ ls -lsiR ../../usr | more
+
+7.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ mkdir testdir1
+lefti97@BigRedLaptop:~$ cd testdir1
+lefti97@BigRedLaptop:~/testdir1$ ln ../ask1.txt ask1link
+lefti97@BigRedLaptop:~/testdir1$ stat ../ask1.txt ask1link
+(Output)
+  File: ../ask1.txt
+  Size: 357       	Blocks: 8          IO Block: 4096   regular file
+Device: 802h/2050d	Inode: 25690859    Links: 2
+Access: (0664/-rw-rw-r--)  Uid: ( 1000/ lefti97)   Gid: ( 1000/ lefti97)
+Access: 2019-11-08 19:56:19.703792145 +0200
+Modify: 2019-11-08 00:09:56.876656256 +0200
+Change: 2019-11-08 19:56:01.275869970 +0200
+ Birth: -
+  File: ask1link
+  Size: 357       	Blocks: 8          IO Block: 4096   regular file
+Device: 802h/2050d	Inode: 25690859    Links: 2
+Access: (0664/-rw-rw-r--)  Uid: ( 1000/ lefti97)   Gid: ( 1000/ lefti97)
+Access: 2019-11-08 19:56:19.703792145 +0200
+Modify: 2019-11-08 00:09:56.876656256 +0200
+Change: 2019-11-08 19:56:01.275869970 +0200
+ Birth: -
+
+Τα αρχεία ask1.txt και ask1link έχουν το ίδιο Inode. Αυτό σημαίνει οτι έχει δημιουργηθεί hard link.
+
+8.------------------------------------------------------------------
+
+Μετά την διαγραφή της τελευταίας γραμμής του αρχείου ask1link, διαγράφηκε και η τελευταία γραμμή του αρχείου ask1.txt .
+
+9.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ mkdir kat1
+lefti97@BigRedLaptop:~$ cd kat1
+lefti97@BigRedLaptop:~/kat1$ echo one>file1
+lefti97@BigRedLaptop:~/kat1$ echo two>file2
+lefti97@BigRedLaptop:~/kat1$ cp *
+(Αντιγράφηκε το περιεχόμενο του file1 στο file2.)
+lefti97@BigRedLaptop:~/kat1$ mv *
+(Το file1 εξαφανήστικε από τον φάκελο kat1.)
+
+10.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ egrep [0-9]$ ask1.txt
+Nick Nikolaoy nick23 12232 Aigaleo 5314555
+Helen Georgioy helen3 12136 Peristeri 5748456
+Nick Pappas nick4 11223 Aigaleo 5324123
+Helen Thanoy helen36 11132 Peristeri 9718345
+
+11.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ egrep Pap ask1.txt | egrep -v Aig
+George Pappas george2 12136 Peristeri -------
+
+12.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ egrep -v ^[GN] ask1.txt | egrep Geo | egrep Per
+Helen Georgioy helen3 12136 Peristeri 5748456
+
+13.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ who
+lefti97  tty7         2019-11-09 21:29 (:0)
+
+Ένας.
+
+14.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ ps -e
+(Output πολύ μεγάλο για να το βάλω εδώ.)
+
+
+15.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ pgrep -c sh$
+3
+
+16.------------------------------------------------------------------
+(Μεγαλώστε το font size του output για να διαβάσετε)
+
+lefti97@BigRedLaptop:~$ ps -U root -u root u
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.1 225600  9392 ?        Ss   21:28   0:02 /sbin/in
+root         2  0.0  0.0      0     0 ?        S    21:28   0:00 [kthread
+root         3  0.0  0.0      0     0 ?        I<   21:28   0:00 [rcu_gp]
+root         4  0.0  0.0      0     0 ?        I<   21:28   0:00 [rcu_par
+root         6  0.0  0.0      0     0 ?        I<   21:28   0:00 [kworker
+root         8  0.0  0.0      0     0 ?        I<   21:28   0:00 [mm_perc
+root         9  0.0  0.0      0     0 ?        S    21:28   0:00 [ksoftir
+root        10  0.0  0.0      0     0 ?        I    21:28   0:01 [rcu_sch
+root        11  0.0  0.0      0     0 ?        S    21:28   0:00 [migrati
+root        12  0.0  0.0      0     0 ?        S    21:28   0:00 [idle_in
+root        14  0.0  0.0      0     0 ?        S    21:28   0:00 [cpuhp/0
+root        15  0.0  0.0      0     0 ?        S    21:28   0:00 [cpuhp/1
+root        16  0.0  0.0      0     0 ?        S    21:28   0:00 [idle_in
+root        17  0.0  0.0      0     0 ?        S    21:28   0:00 [migrati
+root        18  0.0  0.0      0     0 ?        S    21:28   0:00 [ksoftir
+root        20  0.0  0.0      0     0 ?        I<   21:28   0:00 [kworker
+root        21  0.0  0.0      0     0 ?        S    21:28   0:00 [cpuhp/2
+root        22  0.0  0.0      0     0 ?        S    21:28   0:00 [idle_in
+root        23  0.0  0.0      0     0 ?        S    21:28   0:00 [migrati
+root        24  0.0  0.0      0     0 ?        S    21:28   0:00 [ksoftir
+root        26  0.0  0.0      0     0 ?        I<   21:28   0:00 [kworker
+root        27  0.0  0.0      0     0 ?        S    21:28   0:00 [cpuhp/3
+root        28  0.0  0.0      0     0 ?        S    21:28   0:00 [idle_in
+root        29  0.0  0.0      0     0 ?        S    21:28   0:00 [migrati
+root        30  0.0  0.0      0     0 ?        S    21:28   0:00 [ksoftir
+root        32  0.0  0.0      0     0 ?        I<   21:28   0:00 [kworker
+root        33  0.0  0.0      0     0 ?        S    21:28   0:00 [kdevtmp
+root        34  0.0  0.0      0     0 ?        I<   21:28   0:00 [netns]
+root        35  0.0  0.0      0     0 ?        S    21:28   0:00 [rcu_tas
+root        36  0.0  0.0      0     0 ?        S    21:28   0:00 [kauditd
+root        37  0.0  0.0      0     0 ?        I    21:28   0:00 [kworker
+root        38  0.0  0.0      0     0 ?        I    21:28   0:00 [kworker
+root        39  0.0  0.0      0     0 ?        S    21:28   0:00 [khungta
+root        40  0.0  0.0      0     0 ?        S    21:28   0:00 [oom_rea
+root        41  0.0  0.0      0     0 ?        I<   21:28   0:00 [writeba
+root        42  0.0  0.0      0     0 ?        S    21:28   0:00 [kcompac
+root        43  0.0  0.0      0     0 ?        SN   21:28   0:00 [ksmd]
+root        44  0.0  0.0      0     0 ?        SN   21:28   0:00 [khugepa
+root        45  0.0  0.0      0     0 ?        I<   21:28   0:00 [crypto]
+root        46  0.0  0.0      0     0 ?        I<   21:28   0:00 [kintegr
+root        47  0.0  0.0      0     0 ?        I<   21:28   0:00 [kblockd
+root        48  0.0  0.0      0     0 ?        I<   21:28   0:00 [tpm_dev
+root        49  0.0  0.0      0     0 ?        I<   21:28   0:00 [ata_sff
+root        50  0.0  0.0      0     0 ?        I<   21:28   0:00 [md]
+root        51  0.0  0.0      0     0 ?        I<   21:28   0:00 [edac-po
+root        53  0.0  0.0      0     0 ?        I<   21:28   0:00 [devfreq
+root        54  0.0  0.0      0     0 ?        S    21:28   0:00 [watchdo
+root        58  0.0  0.0      0     0 ?        S    21:28   0:00 [kswapd0
+root        59  0.0  0.0      0     0 ?        I<   21:28   0:00 [kworker
+root        60  0.0  0.0      0     0 ?        S    21:28   0:00 [ecryptf
+root       149  0.0  0.0      0     0 ?        I<   21:28   0:00 [kthrotl
+root       150  0.0  0.0      0     0 ?        I<   21:28   0:00 [acpi_th
+root       151  0.0  0.0      0     0 ?        I    21:28   0:00 [kworker
+root       152  0.0  0.0      0     0 ?        I<   21:28   0:00 [ipv6_ad
+root       153  0.0  0.0      0     0 ?        I    21:28   0:00 [kworker
+root       164  0.0  0.0      0     0 ?        I<   21:28   0:00 [kstrp]
+root       186  0.0  0.0      0     0 ?        I<   21:28   0:00 [charger
+root       239  0.0  0.0      0     0 ?        S    21:28   0:00 [scsi_eh
+root       240  0.0  0.0      0     0 ?        I<   21:28   0:00 [scsi_tm
+root       241  0.0  0.0      0     0 ?        S    21:28   0:00 [scsi_eh
+root       242  0.0  0.0      0     0 ?        I<   21:28   0:00 [scsi_tm
+root       244  0.0  0.0      0     0 ?        S    21:28   0:00 [scsi_eh
+root       245  0.0  0.0      0     0 ?        I<   21:28   0:00 [scsi_tm
+root       246  0.0  0.0      0     0 ?        S    21:28   0:00 [scsi_eh
+root       247  0.0  0.0      0     0 ?        I<   21:28   0:00 [scsi_tm
+root       248  0.0  0.0      0     0 ?        I    21:28   0:00 [kworker
+root       249  0.0  0.0      0     0 ?        I<   21:28   0:00 [kworker
+root       250  0.0  0.0      0     0 ?        S    21:28   0:00 [i915/si
+root       251  0.0  0.0      0     0 ?        S    21:28   0:00 [i915/si
+root       252  0.0  0.0      0     0 ?        S    21:28   0:00 [i915/si
+root       253  0.0  0.0      0     0 ?        S    21:28   0:00 [i915/si
+root       255  0.0  0.0      0     0 ?        I    21:28   0:00 [kworker
+root       257  0.0  0.0      0     0 ?        I<   21:28   0:00 [kworker
+root       258  0.0  0.0      0     0 ?        I<   21:28   0:00 [kworker
+root       316  0.0  0.0      0     0 ?        I<   21:28   0:00 [kworker
+root       338  0.0  0.0      0     0 ?        S    21:28   0:00 [jbd2/sd
+root       339  0.0  0.0      0     0 ?        I<   21:28   0:00 [ext4-rs
+root       385  0.0  0.2 111304 16932 ?        S<s  21:28   0:00 /lib/sys
+root       405  0.0  0.0      0     0 ?        S<   21:28   0:00 [loop0]
+root       407  0.0  0.0      0     0 ?        S<   21:28   0:00 [loop1]
+root       410  0.0  0.0      0     0 ?        S<   21:28   0:00 [loop2]
+root       412  0.0  0.0      0     0 ?        S<   21:28   0:00 [loop3]
+root       413  0.0  0.0      0     0 ?        S<   21:28   0:00 [loop4]
+root       415  0.0  0.0  48204  6468 ?        Ss   21:28   0:01 /lib/sys
+root       416  0.0  0.0      0     0 ?        S<   21:28   0:00 [loop5]
+root       441  0.0  0.0      0     0 ?        S    21:28   0:00 [irq/44-
+root       444  0.0  0.0      0     0 ?        I<   21:28   0:00 [asus_wi
+root       488  0.0  0.0      0     0 ?        I<   21:28   0:00 [led_wor
+root       491  0.0  0.0      0     0 ?        I<   21:28   0:00 [cfg8021
+root       514  0.0  0.0      0     0 ?        I<   21:28   0:00 [kmemsti
+root       763  0.0  0.0      0     0 ?        I<   21:28   0:00 [kworker
+root       813  0.0  0.1 186996  9608 ?        Rsl  21:28   0:00 /usr/sbi
+root       816  0.0  0.0   4548   832 ?        Ss   21:28   0:00 /usr/sbi
+root       820  0.0  0.1 308572  8728 ?        Ssl  21:28   0:00 /usr/lib
+root       826  0.0  0.2 177644 17424 ?        Ssl  21:28   0:00 /usr/bin
+root       829  0.0  0.0 110476  3456 ?        Ssl  21:28   0:00 /usr/sbi
+root       830  0.0  0.2 994164 21604 ?        Ssl  21:28   0:00 /usr/lib
+root       835  0.0  0.0  36476  4520 ?        Ss   21:28   0:00 /usr/lib
+root       837  0.0  0.1 517672 13752 ?        Ssl  21:28   0:00 /usr/lib
+root       839  0.0  0.1 107688  8092 ?        Ss   21:28   0:00 /usr/sbi
+root       841  0.0  0.1 434324  9340 ?        Ssl  21:28   0:00 /usr/sbi
+root       843  0.0  0.0  70688  6152 ?        Ss   21:28   0:00 /lib/sys
+root       855  0.0  0.0  45480  7948 ?        Ss   21:28   0:00 /sbin/wp
+root       857  0.0  0.2 576616 18892 ?        Ssl  21:28   0:00 /usr/sbi
+root       860  0.0  0.0  38428  3220 ?        Ss   21:28   0:00 /usr/sbi
+root       878  0.0  0.1 321708 11904 ?        Ssl  21:28   0:00 /usr/lib
+root       880  0.0  0.1 303520 10964 ?        Ssl  21:28   0:00 /usr/sbi
+root      1019  0.0  0.2 194356 20104 ?        Ssl  21:29   0:00 /usr/bin
+root      1025  0.0  0.1 308844  9076 ?        SLsl 21:29   0:00 /usr/sbi
+root      1042  3.2  1.1 562028 94460 tty7     Rsl+ 21:29   1:26 /usr/lib
+root      1044  0.0  0.0  23288  1988 tty1     Ss+  21:29   0:00 /sbin/ag
+root      1049  0.0  0.0      0     0 ?        S    21:29   0:00 [ath9k-h
+root      1178  0.0  0.1 322420  9036 ?        Ssl  21:29   0:00 /usr/lib
+root      1202  0.0  0.0 250548  7268 ?        Sl   21:29   0:00 lightdm 
+root      1447  0.0  0.0  25988  6088 ?        S    21:29   0:00 /sbin/dh
+root      1833  0.0  0.0      0     0 ?        S<   21:29   0:00 [krfcomm
+root      3209  0.0  0.0      0     0 ?        I    21:42   0:00 [kworker
+root      3514  0.0  0.0      0     0 ?        I    21:49   0:00 [kworker
+root      3546  0.0  0.0      0     0 ?        S    21:49   0:00 [scsi_eh
+root      3547  0.0  0.0      0     0 ?        I<   21:49   0:00 [scsi_tm
+root      3548  0.0  0.0      0     0 ?        S    21:49   0:00 [usb-sto
+root      3917  0.0  0.0      0     0 ?        I    21:58   0:00 [kworker
+root      3918  0.0  0.0      0     0 ?        I    21:58   0:00 [kworker
+root      4086  0.0  0.0      0     0 ?        I    22:08   0:00 [kworker
+root      4091  0.0  0.0      0     0 ?        I    22:10   0:00 [kworker
+root      4092  0.0  0.0      0     0 ?        I    22:10   0:00 [kworker
+root      4093  0.0  0.0      0     0 ?        I    22:10   0:00 [kworker
+root      4118  0.0  0.0      0     0 ?        I    22:12   0:00 [kworker
+
+17.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ ls -l | egrep -c ?rw-rw-rw-
+0
+
+18.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ ls ../.. | egrep ^b
+bin
+boot
+
+19.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:/dev$ ls -l tty*
+crw-rw-rw- 1 root tty     5,  0 Νοε   9 21:28 tty
+crw--w---- 1 root tty     4,  0 Νοε   9 21:28 tty0
+crw--w---- 1 root tty     4,  1 Νοε   9 21:29 tty1
+crw--w---- 1 root tty     4, 10 Νοε   9 21:28 tty10
+crw--w---- 1 root tty     4, 11 Νοε   9 21:28 tty11
+crw--w---- 1 root tty     4, 12 Νοε   9 21:28 tty12
+crw--w---- 1 root tty     4, 13 Νοε   9 21:28 tty13
+crw--w---- 1 root tty     4, 14 Νοε   9 21:28 tty14
+crw--w---- 1 root tty     4, 15 Νοε   9 21:28 tty15
+crw--w---- 1 root tty     4, 16 Νοε   9 21:28 tty16
+crw--w---- 1 root tty     4, 17 Νοε   9 21:28 tty17
+crw--w---- 1 root tty     4, 18 Νοε   9 21:28 tty18
+crw--w---- 1 root tty     4, 19 Νοε   9 21:28 tty19
+crw--w---- 1 root tty     4,  2 Νοε   9 21:28 tty2
+crw--w---- 1 root tty     4, 20 Νοε   9 21:28 tty20
+crw--w---- 1 root tty     4, 21 Νοε   9 21:28 tty21
+crw--w---- 1 root tty     4, 22 Νοε   9 21:28 tty22
+crw--w---- 1 root tty     4, 23 Νοε   9 21:28 tty23
+crw--w---- 1 root tty     4, 24 Νοε   9 21:28 tty24
+crw--w---- 1 root tty     4, 25 Νοε   9 21:28 tty25
+crw--w---- 1 root tty     4, 26 Νοε   9 21:28 tty26
+crw--w---- 1 root tty     4, 27 Νοε   9 21:28 tty27
+crw--w---- 1 root tty     4, 28 Νοε   9 21:28 tty28
+crw--w---- 1 root tty     4, 29 Νοε   9 21:28 tty29
+crw--w---- 1 root tty     4,  3 Νοε   9 21:28 tty3
+crw--w---- 1 root tty     4, 30 Νοε   9 21:28 tty30
+crw--w---- 1 root tty     4, 31 Νοε   9 21:28 tty31
+crw--w---- 1 root tty     4, 32 Νοε   9 21:28 tty32
+crw--w---- 1 root tty     4, 33 Νοε   9 21:28 tty33
+crw--w---- 1 root tty     4, 34 Νοε   9 21:28 tty34
+crw--w---- 1 root tty     4, 35 Νοε   9 21:28 tty35
+crw--w---- 1 root tty     4, 36 Νοε   9 21:28 tty36
+crw--w---- 1 root tty     4, 37 Νοε   9 21:28 tty37
+crw--w---- 1 root tty     4, 38 Νοε   9 21:28 tty38
+crw--w---- 1 root tty     4, 39 Νοε   9 21:28 tty39
+crw--w---- 1 root tty     4,  4 Νοε   9 21:28 tty4
+crw--w---- 1 root tty     4, 40 Νοε   9 21:28 tty40
+crw--w---- 1 root tty     4, 41 Νοε   9 21:28 tty41
+crw--w---- 1 root tty     4, 42 Νοε   9 21:28 tty42
+crw--w---- 1 root tty     4, 43 Νοε   9 21:28 tty43
+crw--w---- 1 root tty     4, 44 Νοε   9 21:28 tty44
+crw--w---- 1 root tty     4, 45 Νοε   9 21:28 tty45
+crw--w---- 1 root tty     4, 46 Νοε   9 21:28 tty46
+crw--w---- 1 root tty     4, 47 Νοε   9 21:28 tty47
+crw--w---- 1 root tty     4, 48 Νοε   9 21:28 tty48
+crw--w---- 1 root tty     4, 49 Νοε   9 21:28 tty49
+crw--w---- 1 root tty     4,  5 Νοε   9 21:28 tty5
+crw--w---- 1 root tty     4, 50 Νοε   9 21:28 tty50
+crw--w---- 1 root tty     4, 51 Νοε   9 21:28 tty51
+crw--w---- 1 root tty     4, 52 Νοε   9 21:28 tty52
+crw--w---- 1 root tty     4, 53 Νοε   9 21:28 tty53
+crw--w---- 1 root tty     4, 54 Νοε   9 21:28 tty54
+crw--w---- 1 root tty     4, 55 Νοε   9 21:28 tty55
+crw--w---- 1 root tty     4, 56 Νοε   9 21:28 tty56
+crw--w---- 1 root tty     4, 57 Νοε   9 21:28 tty57
+crw--w---- 1 root tty     4, 58 Νοε   9 21:28 tty58
+crw--w---- 1 root tty     4, 59 Νοε   9 21:28 tty59
+crw--w---- 1 root tty     4,  6 Νοε   9 21:28 tty6
+crw--w---- 1 root tty     4, 60 Νοε   9 21:28 tty60
+crw--w---- 1 root tty     4, 61 Νοε   9 21:28 tty61
+crw--w---- 1 root tty     4, 62 Νοε   9 21:28 tty62
+crw--w---- 1 root tty     4, 63 Νοε   9 21:28 tty63
+crw--w---- 1 root tty     4,  7 Νοε   9 21:29 tty7
+crw--w---- 1 root tty     4,  8 Νοε   9 21:28 tty8
+crw--w---- 1 root tty     4,  9 Νοε   9 21:28 tty9
+crw------- 1 root root    5,  3 Νοε   9 21:28 ttyprintk
+crw-rw---- 1 root dialout 4, 64 Νοε   9 21:28 ttyS0
+crw-rw---- 1 root dialout 4, 65 Νοε   9 21:28 ttyS1
+crw-rw---- 1 root dialout 4, 74 Νοε   9 21:28 ttyS10
+crw-rw---- 1 root dialout 4, 75 Νοε   9 21:28 ttyS11
+crw-rw---- 1 root dialout 4, 76 Νοε   9 21:28 ttyS12
+crw-rw---- 1 root dialout 4, 77 Νοε   9 21:28 ttyS13
+crw-rw---- 1 root dialout 4, 78 Νοε   9 21:28 ttyS14
+crw-rw---- 1 root dialout 4, 79 Νοε   9 21:28 ttyS15
+crw-rw---- 1 root dialout 4, 80 Νοε   9 21:28 ttyS16
+crw-rw---- 1 root dialout 4, 81 Νοε   9 21:28 ttyS17
+crw-rw---- 1 root dialout 4, 82 Νοε   9 21:28 ttyS18
+crw-rw---- 1 root dialout 4, 83 Νοε   9 21:28 ttyS19
+crw-rw---- 1 root dialout 4, 66 Νοε   9 21:28 ttyS2
+crw-rw---- 1 root dialout 4, 84 Νοε   9 21:28 ttyS20
+crw-rw---- 1 root dialout 4, 85 Νοε   9 21:28 ttyS21
+crw-rw---- 1 root dialout 4, 86 Νοε   9 21:28 ttyS22
+crw-rw---- 1 root dialout 4, 87 Νοε   9 21:28 ttyS23
+crw-rw---- 1 root dialout 4, 88 Νοε   9 21:28 ttyS24
+crw-rw---- 1 root dialout 4, 89 Νοε   9 21:28 ttyS25
+crw-rw---- 1 root dialout 4, 90 Νοε   9 21:28 ttyS26
+crw-rw---- 1 root dialout 4, 91 Νοε   9 21:28 ttyS27
+crw-rw---- 1 root dialout 4, 92 Νοε   9 21:28 ttyS28
+crw-rw---- 1 root dialout 4, 93 Νοε   9 21:28 ttyS29
+crw-rw---- 1 root dialout 4, 67 Νοε   9 21:28 ttyS3
+crw-rw---- 1 root dialout 4, 94 Νοε   9 21:28 ttyS30
+crw-rw---- 1 root dialout 4, 95 Νοε   9 21:28 ttyS31
+crw-rw---- 1 root dialout 4, 68 Νοε   9 21:28 ttyS4
+crw-rw---- 1 root dialout 4, 69 Νοε   9 21:28 ttyS5
+crw-rw---- 1 root dialout 4, 70 Νοε   9 21:28 ttyS6
+crw-rw---- 1 root dialout 4, 71 Νοε   9 21:28 ttyS7
+crw-rw---- 1 root dialout 4, 72 Νοε   9 21:28 ttyS8
+crw-rw---- 1 root dialout 4, 73 Νοε   9 21:28 ttyS9
+
+20.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ sort -rk 3,3 ask1.txt
+Nick Pappas nick4 11223 Aigaleo 5324123
+Nick Nikolaoy nick23 12232 Aigaleo 5314555
+Helen Ioannoy helen367 13222 Athens -------
+Helen Thanoy helen36 11132 Peristeri 9718345
+Helen Georgioy helen3 12136 Peristeri 5748456
+George Georgioy george583 11132 Athens -------
+George Pappas george2 12136 Peristeri -------
+
+21.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ ls -lhS *.c
+-rw-r--r-- 1 lefti97 lefti97 1,3K Απρ   7  2019 mkbdg.c
+-rw-r--r-- 1 lefti97 lefti97 1,1K Απρ   8  2019 nvxc.c
+-rw-r--r-- 1 lefti97 lefti97  734 Απρ  12  2019 uitew.c
+-rw-r--r-- 1 lefti97 lefti97  598 Απρ  14  2019 njo.c
+
+22.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ ls -lhS | egrep rw-r--r--
+-rw-r--r-- 1 lefti97 lefti97 1,3K Απρ   7  2019 mkbdg.c
+-rw-r--r-- 1 lefti97 lefti97 1,1K Απρ   8  2019 nvxc.c
+-rw-r--r-- 1 lefti97 lefti97  734 Απρ  12  2019 uitew.c
+-rw-r--r-- 1 lefti97 lefti97  598 Απρ  14  2019 njo.c
+
+23.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ ls -l ../../dev | sort -k 3,3 | sort -k 4,4>binfiles.txt
+
+24.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ who | egrep ^ls1 | sort -k 3,3 | sort -k 4,4>userFile
+
+25.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ sed -i 's/Nick/Nickolaos/g' ask1.txt
+
+26.------------------------------------------------------------------
+
+α) -rwxr-x—x
+	Regular file, Other: Read Write Execute, 
+				Group: Read Execute, User: Execute
+β) drwxr-x---
+	Directory, Other: Read Write Execute, Group: Read Execute
+γ) drwx--x--x
+	Directory, Other: Read Write Execute, Group: Execute,
+			  User: Execute
+
+27.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ cd testdir1
+lefti97@BigRedLaptop:~/testdir1$ chmod 744 -R .
+
+28.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ chmod 1770 testdir1
+
+
+29.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ sudo -i
+root@BigRedLaptop:~# cd ..
+root@BigRedLaptop:/# cd home
+root@BigRedLaptop:/home# cd lefti97
+root@BigRedLaptop:/home/lefti97# chown myfriend ask1.txt
+-Δεν ξέρω που βρίσκω το working directory του myfriend.
+
+30.------------------------------------------------------------------
+
+Τα items είναι character devices.
+Δεν ξέρω τι κάνουν αυτές οι εντολές.
+
+31.------------------------------------------------------------------
+
+lefti97@BigRedLaptop:~$ touch f1 f2 f3 f4 f5 f6 f7
+lefti97@BigRedLaptop:~$ chmod 757 f1
+lefti97@BigRedLaptop:~$ chmod 313 f2
+lefti97@BigRedLaptop:~$ chmod 010 f3
+lefti97@BigRedLaptop:~$ chmod 642 f4
+lefti97@BigRedLaptop:~$ chmod 551 f5
+lefti97@BigRedLaptop:~$ chmod 133 f6
+lefti97@BigRedLaptop:~$ chmod 111 f7
+
+a)
+lefti97@BigRedLaptop:~$ ls -l | egrep ^....r-x
+-rwxr-xrwx 1 lefti97  lefti97     0 Νοε  24 20:39 f1
+-r-xr-x--x 1 lefti97  lefti97     0 Νοε  24 20:39 f5
+
+b)
+lefti97@BigRedLaptop:~$ ls -l | egrep ".(...)...\1"
+-rwxr-xrwx 1 lefti97  lefti97     0 Νοε  24 20:39 f1
+--wx--x-wx 1 lefti97  lefti97     0 Νοε  24 20:39 f2
+------x--- 1 lefti97  lefti97     0 Νοε  24 20:39 f3
+---x--x--x 1 lefti97  lefti97     0 Νοε  24 20:39 f7
+
+c)
+lefti97@BigRedLaptop:~$ ls -l | egrep "^..(.)..\1..\1."
+------x--- 1 lefti97  lefti97     0 Νοε  24 20:39 f3
+-r-xr-x--x 1 lefti97  lefti97     0 Νοε  24 20:39 f5
+---x--x--x 1 lefti97  lefti97     0 Νοε  24 20:39 f7
+
+d)
+lefti97@BigRedLaptop:~$ ls -l | egrep "^..(..).\1.\1"
+-r-xr-x--x 1 lefti97  lefti97     0 Νοε  24 20:39 f5
+---x--x--x 1 lefti97  lefti97     0 Νοε  24 20:39 f7
+
+e)
+lefti97@BigRedLaptop:~$ ls -l | egrep "^....(.).(.)\1.\2"
+-rwxr-xrwx 1 lefti97  lefti97     0 Νοε  24 20:39 f1
+--wx--x-wx 1 lefti97  lefti97     0 Νοε  24 20:39 f2
+---x-wx-wx 1 lefti97  lefti97     0 Νοε  24 20:39 f6
+---x--x--x 1 lefti97  lefti97     0 Νοε  24 20:39 f7
+
+
+32.------------------------------------------------------------------
+
+egrep .*:.*:.*:.*:.*:.*:.* ../../etc/passwd
+a)
+lefti97@BigRedLaptop:~$ egrep ".*:.*:.*:.*:.*:.*:/bin/bash" 
+
+b)
+lefti97@BigRedLaptop:~$ egrep ".*:.*:.*:.*:.*:/home.*" ../../etc/passwd
+
+c)
+lefti97@BigRedLaptop:~$ egrep ".*:.*:(.*):\1:.*:.*:.*" ../../etc/passwd
+
+d)
+
+e)

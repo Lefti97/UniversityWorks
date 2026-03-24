@@ -1,1 +1,1 @@
-Repo for my Informatics & Computer Engineering programming works.
+This repo contains almost all of the assignments and exams that i did for my undergraduate studies in Informatics and Computer Engineering at University of West Attica(https://ice.uniwa.gr/).
